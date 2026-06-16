@@ -111,7 +111,12 @@ Email: contact@imagegeneration.co.in
 
 <script>
 
-let current = "";
+// Separate ad counters to limit ad displays per session
+let generalAdCount = 0;
+let generateAdCount = 0;
+
+const MAX_GENERAL_ADS = 3;  // Maximum ads for Copy/Download buttons
+const MAX_GENERATE_ADS = 2; // Maximum ads strictly for the Generate button
 
 /* IMPORTANT: PEXELS API KEY */
 const PEXELS_API_KEY = "UrZGxVi4hcxO7ciX2sD7VVM5Gf8H7zcZDYsC1Pp35X9fOQkUS8zSOqEb";
@@ -119,78 +124,124 @@ const PEXELS_API_KEY = "UrZGxVi4hcxO7ciX2sD7VVM5Gf8H7zcZDYsC1Pp35X9fOQkUS8zSOqEb
 /* YOUR DIRECT AD LINK */
 const AD_URL = "https://omg10.com/4/11155181";
 
+/* AUTOMATIC RELOAD CAPABILITY ON PAGE INTRUSION */
+window.onload = function() {
+    const savedSrcUrl = localStorage.getItem("saved_pexels_url");
+    const savedBase64 = localStorage.getItem("saved_base64_data");
+    const imgElement = document.getElementById("img");
+
+    if(savedBase64) {
+        imgElement.src = savedBase64;
+        imgElement.style.display = "block";
+        document.getElementById("status").innerText = "Restored previous image";
+    }
+};
+
 /* PAGE SWITCH */
 function show(id){
 document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
 document.getElementById(id).classList.add('active');
 }
 
-/* GLOBAL AD POPUP FUNCTION */
-function triggerAd() {
+/* LIMITED AD POPUP FOR UTILITIES (COPY / DOWNLOAD) */
+function triggerGeneralAd() {
+if (generalAdCount < MAX_GENERAL_ADS) {
 window.open(AD_URL, "_blank");
+generalAdCount++;
+}
 }
 
-/* GENERATE */
+/* LIMITED AD POPUP FOR GENERATION */
+function triggerGenerateAd() {
+if (generateAdCount < MAX_GENERATE_ADS) {
+window.open(AD_URL, "_blank");
+generateAdCount++;
+}
+}
+
+/* GENERATE WITH BULLETPROOF BROWSER-DISK CACHING */
 async function generate(){
 const prompt=document.getElementById("prompt").value;
 if(!prompt)return alert("Enter prompt");
 
-document.getElementById("status").innerText="Loading...";
+document.getElementById("status").innerText="Processing hardware storage cache...";
 
-const res=await fetch(`https://api.pexels.com/v1/search?query=${prompt}&per_page=1`,{
+try {
+const res=await fetch(`https://api.pexels.com/v1/search?query=${encodeURIComponent(prompt)}&per_page=1`,{
 headers:{Authorization:PEXELS_API_KEY}
 });
 
 const data=await res.json();
 
-if(!data.photos.length){
-document.getElementById("status").innerText="No image";
+if(!data.photos || !data.photos.length){
+document.getElementById("status").innerText="No image found";
 return;
 }
 
-current=data.photos[0].src.original;
+const rawUrl = data.photos[0].src.original;
+const imgElement = document.getElementById("img");
 
-document.getElementById("img").src=current;
-document.getElementById("img").style.display="block";
+// Fetch the physical file bytes to write inside system storage
+const imageResponse = await fetch(rawUrl);
+const imageBlob = await imageResponse.blob();
 
-document.getElementById("status").innerText="Done";
+const reader = new FileReader();
+reader.readAsDataURL(imageBlob);
+reader.onloadend = function() {
+    const stringDataStream = reader.result;
+    
+    // Write data permanently onto user storage space disk hardware
+    localStorage.setItem("saved_pexels_url", rawUrl);
+    localStorage.setItem("saved_base64_data", stringDataStream);
+    
+    // Assign view asset
+    imgElement.src = stringDataStream;
+    imgElement.style.display = "block";
+    document.getElementById("status").innerText = "Done";
+
+    // Launch ad target safely
+    setTimeout(() => {
+        triggerGenerateAd();
+    }, 250);
+};
+
+} catch (err) {
+console.error(err);
+document.getElementById("status").innerText="Error generating image asset.";
+}
 }
 
-/* COPY + ADS (Ad triggers only here now) */
+/* COPY + LIMITED ADS */
 function copy(){
-if(!current) return alert("Generate an image first");
-navigator.clipboard.writeText(current);
+const savedSrcUrl = localStorage.getItem("saved_pexels_url");
+if(!savedSrcUrl) return alert("Generate an image first");
+
+navigator.clipboard.writeText(savedSrcUrl);
 alert("Copied!");
 
-triggerAd();
+triggerGeneralAd();
 }
 
-/* DOWNLOAD (Clean download without ads) */
+/* DOWNLOAD FUNCTION */
 async function downloadImg(){
-if(!current) return alert("Generate an image first");
+const savedBase64 = localStorage.getItem("saved_base64_data");
+if(!savedBase64) return alert("Generate an image first");
 
+triggerGeneralAd();
 document.getElementById("status").innerText="Downloading...";
 
 try {
-const response = await fetch(current);
-const blob = await response.blob();
-const blobUrl = window.URL.createObjectURL(blob);
-
 const a = document.createElement("a");
-a.href = blobUrl;
-a.download = "generated-image.jpg";
+a.href = savedBase64;
+a.download = `ai-image-${Date.now()}.jpg`;
 document.body.appendChild(a);
 a.click();
-
 document.body.removeChild(a);
-window.URL.revokeObjectURL(blobUrl);
 
 document.getElementById("status").innerText="Downloaded Successfully";
-
 } catch (error) {
 console.error(error);
-document.getElementById("status").innerText="Download failed. Try copying the URL instead.";
-window.open(current, "_blank");
+document.getElementById("status").innerText="Download failed.";
 }
 }
 
