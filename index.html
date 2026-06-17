@@ -3,14 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ImageGeneration.co.in</title>
+<title>ImageGeneration.co.in - Free Instant AI Image & Logo Generator</title>
+<meta name="description" content="Generate high-quality AI images, 3D vectors, animations, and minimalist logos instantly at imagegeneration.co.in.">
+<meta name="keywords" content="AI image generator, free logo maker, 3d animation, vector art generator, custom avatar generator">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://imagegeneration.co.in/">
 
 <style>
 body{
 margin:0;
-font-family:Arial;
+font-family:Arial, sans-serif;
 background:#0f0f0f;
 color:white;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+}
+
+main {
+flex: 1;
 }
 
 nav{
@@ -29,6 +40,11 @@ border:none;
 color:white;
 cursor:pointer;
 font-size:14px;
+font-weight: bold;
+}
+
+nav button:hover {
+color: #00aaff;
 }
 
 .page{display:none;padding:15px;max-width:900px;margin:auto;}
@@ -36,25 +52,101 @@ font-size:14px;
 
 .card{
 background:#1c1c1c;
-padding:15px;
+padding:20px;
 border-radius:10px;
 margin-top:15px;
+box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-input,button{
+.form-group {
+margin-bottom: 15px;
+display: flex;
+flex-direction: column;
+}
+
+.form-group label {
+font-size: 14px;
+color: #aaa;
+margin-bottom: 5px;
+font-weight: 600;
+}
+
+input, select, button{
 width:100%;
 padding:12px;
-margin-top:10px;
+margin-top:5px;
 border:none;
 border-radius:8px;
 box-sizing:border-box;
+font-size: 1rem;
 }
 
-input{background:#222;color:white;}
-button{background:#00aaff;color:white;cursor:pointer;}
+input, select{background:#222;color:white;border:1px solid #333;}
+select { appearance: none; background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>"); background-repeat: no-repeat; background-position: right 10px center; }
+button{background:#00aaff;color:white;cursor:pointer;font-weight:bold;transition: background 0.2s;}
+button:hover{background:#0088cc;}
 
-img{width:100%;margin-top:15px;border-radius:10px;display:none;}
-.small{text-align:center;color:#aaa;font-size:13px;}
+.btn-unlock {
+background-color: #28a745;
+animation: pulse 1.5s infinite;
+margin-top: 15px;
+}
+.btn-unlock:hover { background-color: #218838; }
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7); }
+    70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(40, 167, 69, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
+}
+
+.output-container {
+width: 100%;
+min-height: 250px;
+background: #151515;
+margin-top: 15px;
+border-radius: 10px;
+border: 2px dashed #333;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 10px;
+position: relative;
+}
+
+img{max-width:100%; max-height: 500px; object-fit: contain; border-radius:10px; display:none;}
+.small{text-align:center;color:#aaa;font-size:13px;margin-top:10px;}
+
+.loading-spinner {
+border: 4px solid rgba(0, 170, 255, 0.1);
+border-top: 4px solid #00aaff;
+border-radius: 50%; width: 45px; height: 45px;
+animation: spin 1s linear infinite; display: none;
+}
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* Legal Modal Overrides */
+.legal-modal {
+display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+background-color: rgba(0,0,0,0.8); z-index: 2000; justify-content: center; align-items: center;
+padding: 15px;
+}
+.legal-content {
+background-color: #1c1c1c; padding: 25px; border-radius: 10px; max-width: 650px;
+width: 100%; max-height: 80vh; overflow-y: auto; position: relative; border: 1px solid #333;
+}
+.close-modal {
+position: absolute; top: 10px; right: 15px; font-size: 24px; cursor: pointer; color: #aaa;
+}
+.close-modal:hover { color: #fff; }
+.legal-content h3 { margin-top: 15px; color: #00aaff; }
+
+footer {
+background: #1c1c1c; padding: 20px; text-align: center; font-size: 14px; color: #aaa; border-top: 1px solid #333;
+}
+footer ul { list-style: none; padding: 0; display: flex; justify-content: center; gap: 20px; margin-bottom: 10px; flex-wrap: wrap; }
+footer ul li a { color: #aaa; text-decoration: none; cursor: pointer; }
+footer ul li a:hover { color: #00aaff; }
 </style>
 </head>
 
@@ -63,188 +155,356 @@ img{width:100%;margin-top:15px;border-radius:10px;display:none;}
 <nav>
 <button onclick="show('home')">Home</button>
 <button onclick="show('features')">Features</button>
-<button onclick="show('about')">About</button>
+<button onclick="show('about')">About Us</button>
 <button onclick="show('contact')">Contact</button>
 </nav>
 
+<main>
 <div id="home" class="page active">
+    <h2 style="text-align:center; margin-top:10px;">AI Image Generator</h2>
+    <div class="card">
+        <div class="form-group">
+            <label for="prompt">What would you like to build or search?</label>
+            <input id="prompt" placeholder="Describe your image concept or search keyword...">
+        </div>
 
-<h2 style="text-align:center;">AI Image Generator</h2>
+        <div class="form-group">
+            <label for="style">Generation Engine / Image Style</label>
+            <select id="style">
+                <option value="">Default Mixed AI Image</option>
+                <option value="pexels_search">Pexels HD Stock Image Search (Real Photos)</option>
+                <option value="photorealistic cinematic lighting 8k resolution">Photorealistic High-Res AI Photo</option>
+                <option value="vector minimalist flat app icon logo">Minimalist Graphic Logo Design</option>
+                <option value="mascot vector gaming sports emblem logo">Mascot Logo Emblem</option>
+                <option value="3d digital animation studio anime style illustration ghibli textless">Anime Animation Style</option>
+                <option value="3d pixar animation style cute cartoon character asset">Pixar 3D Animation Style</option>
+                <option value="cyberpunk sci-fi neon futuristic concept art">Cyberpunk Concept Art</option>
+                <option value="retro gaming pixel art 8-bit asset style">8-Bit Retro Pixel Art</option>
+            </select>
+        </div>
 
-<div class="card">
+        <div class="form-group" id="aspectRatioGroup">
+            <label for="aspectRatio">Aspect Ratio Size</label>
+            <select id="aspectRatio">
+                <option value="1:1">Square (1:1)</option>
+                <option value="16:9">Landscape / Banner (16:9)</option>
+                <option value="9:16">Vertical Portrait / Instagram Reel (9:16)</option>
+                <option value="3:2">Standard Photography Model (3:2)</option>
+            </select>
+        </div>
 
-<input id="prompt" placeholder="Enter prompt">
+        <button onclick="generate()">Generate / Search Image</button>
 
-<button onclick="generate()">Generate Image</button>
+        <div class="output-container" id="outputWrapper">
+            <div class="loading-spinner" id="spinner"></div>
+            <p id="placeholderText" style="color: #666; text-align: center; font-size:14px;">Your optimized creation will display here.</p>
+            
+            <button id="unlockBtn" class="btn-unlock" style="display: none;" onclick="unlockImage()">🔓 Unlock & View Image</button>
+            
+            <img id="img" alt="AI Generated Output">
+        </div>
 
-<img id="img">
+        <div style="margin-top:15px; display:flex; gap:10px;">
+            <button id="copyBtn" onclick="copy()" style="background:#333; display:none;">Copy URL</button>
+            <button id="downloadBtn" onclick="downloadImg()" style="background:#333; display:none;">Download Image</button>
+        </div>
 
-<button onclick="copy()">Copy URL</button>
-<button onclick="downloadImg()">Download Image</button>
-
-<p id="status" class="small"></p>
-
-</div>
+        <p id="status" class="small"></p>
+    </div>
 </div>
 
 <div id="features" class="page">
-<div class="card">
-✔ AI Image Search<br>
-✔ Copy Image URL<br>
-✔ Download Image<br>
-✔ Ads Integration<br>
-✔ Mobile Friendly<br>
-</div>
+    <div class="card">
+        <h3 style="color:#00aaff; margin-bottom:10px;">Platform System Features</h3>
+        ✔ Dual Processing: Real AI Generation + Pexels HD Stock Search<br>
+        ✔ Advanced Multi-Style AI Integrations<br>
+        ✔ Custom Aspect Ratio Resolution Selection Mapping<br>
+        ✔ Secure Local Device Hardware Level Asset Caching<br>
+        ✔ Pure Direct URL Link Clipboard Copy Utilities<br>
+        ✔ Fast Single-Click Local Binary Jpeg Downloads<br>
+        ✔ Mobile Responsive Lightweight Layout Controls<br>
+    </div>
 </div>
 
 <div id="about" class="page">
-<div class="card">
-ImageGeneration.co.in is an AI image search tool using Pexels API.
-</div>
+    <div class="card">
+        <h3 style="color:#00aaff; margin-bottom:10px;">About Us</h3>
+        Welcome to <strong>imagegeneration.co.in</strong>. We deliver high-speed static AI processing assets and high-definition photography search tools designed to handle digital imagery, icons, vector models, and promotional artwork cleanly and immediately. Powered by both state-of-the-art distributed neural processing nodes and global media delivery networks, our framework provides professional outputs zero-cost to our regional communities.
+    </div>
 </div>
 
 <div id="contact" class="page">
-<div class="card">
-Email: contact@imagegeneration.co.in
+    <div class="card">
+        <h3 style="color:#00aaff; margin-bottom:10px;">Contact Support</h3>
+        Have an inquiry regarding performance, content ownership parameters, or ad network deployments?<br><br>
+        <strong>Email:</strong> contact@imagegeneration.co.in<br>
+        <strong>Operations Location:</strong> Punganur, Andhra Pradesh, India.
+    </div>
 </div>
+</main>
+
+<div id="privacyModal" class="legal-modal">
+    <div class="legal-content">
+        <span class="close-modal" onclick="closeModal('privacyModal')">&times;</span>
+        <h2>Privacy Policy</h2>
+        <p style="margin-top:10px; font-size: 14px; color: #ccc;">At imagegeneration.co.in, we prioritize clean visitor integrity metrics.</p>
+        <h3>Cookies & Ad System Networks</h3>
+        <p style="font-size: 14px; color: #ccc;">We optimize operations through automated safe-links and analytics monetization tunnels. These utilities monitor basic device operational parameters to deliver high-quality localized monetization experiences during system operations.</p>
+        <h3>Information Integrity</h3>
+        <p style="font-size: 14px; color: #ccc;">We do not capture personal identification databases. All visual caching loops are handled purely on-device using local system storage frameworks.</p>
+    </div>
 </div>
+
+<div id="termsModal" class="legal-modal">
+    <div class="legal-content">
+        <span class="close-modal" onclick="closeModal('termsModal')">&times;</span>
+        <h2>Terms of Service</h2>
+        <p style="margin-top:10px; font-size: 14px; color: #ccc;">Welcome to imagegeneration.co.in.</p>
+        <h3>Usage Controls</h3>
+        <p style="font-size: 14px; color: #ccc;">All asset rendering results derived through the application endpoints are completely free for personal and commercial usage frameworks. However, attempts to bypass mandatory script unlock validations or perform link structural blocks inside redirection instances is strictly prohibited.</p>
+    </div>
+</div>
+
+<footer>
+    <ul>
+        <li><a onclick="openModal('privacyModal')">Privacy Policy</a></li>
+        <li><a onclick="openModal('termsModal')">Terms of Service</a></li>
+        <li><a onclick="show('contact')">Contact Us</a></li>
+    </ul>
+    <p>&copy; 2026 ImageGeneration.co.in. Powered by high-speed neural pipelines.</p>
+</footer>
 
 <script>
-
-// Separate ad counters to limit ad displays per session
 let generalAdCount = 0;
 let generateAdCount = 0;
 
-const MAX_GENERAL_ADS = 3;  // Maximum ads for Copy/Download buttons
-const MAX_GENERATE_ADS = 2; // Maximum ads strictly for the Generate button
+const MAX_GENERAL_ADS = 3;  
+const MAX_GENERATE_ADS = 2; 
 
-/* IMPORTANT: PEXELS API KEY */
+const AD_URL = "https://omg10.com/4/11155181";
 const PEXELS_API_KEY = "UrZGxVi4hcxO7ciX2sD7VVM5Gf8H7zcZDYsC1Pp35X9fOQkUS8zSOqEb";
 
-/* YOUR DIRECT AD LINK */
-const AD_URL = "https://omg10.com/4/11155181";
+// Dynamically show/hide aspect ratio option if Pexels is picked
+document.getElementById('style').addEventListener('change', function() {
+    const arGroup = document.getElementById('aspectRatioGroup');
+    if (this.value === 'pexels_search') {
+        arGroup.style.display = 'none';
+    } else {
+        arGroup.style.display = 'flex';
+    }
+});
 
-/* AUTOMATIC RELOAD CAPABILITY ON PAGE INTRUSION */
+/* RESTORE MEMORY ON MOBILE TAB SWAP INTERRUPTIONS */
 window.onload = function() {
     const savedSrcUrl = localStorage.getItem("saved_pexels_url");
     const savedBase64 = localStorage.getItem("saved_base64_data");
     const imgElement = document.getElementById("img");
+    const placeholderText = document.getElementById("placeholderText");
+    const copyBtn = document.getElementById("copyBtn");
+    const downloadBtn = document.getElementById("downloadBtn");
 
-    if(savedBase64) {
+    if(savedBase64 && savedSrcUrl) {
+        placeholderText.style.display = "none";
         imgElement.src = savedBase64;
         imgElement.style.display = "block";
-        document.getElementById("status").innerText = "Restored previous image";
+        copyBtn.style.display = "inline-block";
+        downloadBtn.style.display = "inline-block";
+        document.getElementById("status").innerText = "Restored previous creation";
     }
 };
 
-/* PAGE SWITCH */
 function show(id){
 document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
 document.getElementById(id).classList.add('active');
+window.scrollTo(0,0);
 }
 
-/* LIMITED AD POPUP FOR UTILITIES (COPY / DOWNLOAD) */
+function openModal(id) { document.getElementById(id).style.display = 'flex'; }
+function closeModal(id) { document.getElementById(id).style.display = 'none'; }
+
 function triggerGeneralAd() {
-if (generalAdCount < MAX_GENERAL_ADS) {
-window.open(AD_URL, "_blank");
-generalAdCount++;
-}
-}
-
-/* LIMITED AD POPUP FOR GENERATION */
-function triggerGenerateAd() {
-if (generateAdCount < MAX_GENERATE_ADS) {
-window.open(AD_URL, "_blank");
-generateAdCount++;
-}
+    if (generalAdCount < MAX_GENERAL_ADS) {
+        window.open(AD_URL, "_blank");
+        generalAdCount++;
+    }
 }
 
-/* GENERATE WITH BULLETPROOF BROWSER-DISK CACHING */
+/* MAP ASPECT RATIO SCALING RESOLUTIONS FOR AI */
+function fetchConfiguredDimensions(ratio) {
+    switch(ratio) {
+        case '16:9': return { w: 1024, h: 576 };
+        case '9:16': return { w: 576, h: 1024 };
+        case '3:2': return { w: 960, h: 640 };
+        default: return { w: 768, h: 768 }; // 1:1 Base Square
+    }
+}
+
+/* UNIFIED PROCESSING PIPELINE ENGINE */
 async function generate(){
-const prompt=document.getElementById("prompt").value;
-if(!prompt)return alert("Enter prompt");
+    const promptValue = document.getElementById("prompt").value.trim();
+    if(!promptValue) return alert("Please enter a text prompt or search keyword");
 
-document.getElementById("status").innerText="Processing hardware storage cache...";
+    const imgElement = document.getElementById("img");
+    const placeholderText = document.getElementById("placeholderText");
+    const spinner = document.getElementById("spinner");
+    const unlockBtn = document.getElementById("unlockBtn");
+    const copyBtn = document.getElementById("copyBtn");
+    const downloadBtn = document.getElementById("downloadBtn");
+    const engineType = document.getElementById("style").value;
 
-try {
-const res=await fetch(`https://api.pexels.com/v1/search?query=${encodeURIComponent(prompt)}&per_page=1`,{
-headers:{Authorization:PEXELS_API_KEY}
-});
+    // Clean UI state layout
+    imgElement.style.display = "none";
+    unlockBtn.style.display = "none";
+    copyBtn.style.display = "none";
+    downloadBtn.style.display = "none";
+    
+    placeholderText.style.display = "block";
+    spinner.style.display = "block";
+    document.getElementById("status").innerText = "";
 
-const data=await res.json();
+    // Clear previous persistent memories safely
+    localStorage.removeItem("saved_pexels_url");
+    localStorage.removeItem("saved_base64_data");
+    localStorage.removeItem("saved_blob_url");
 
-if(!data.photos || !data.photos.length){
-document.getElementById("status").innerText="No image found";
-return;
+    let targetUrl = "";
+
+    try {
+        if (engineType === "pexels_search") {
+            placeholderText.innerText = "Searching high-definition Pexels stock infrastructure...";
+            const res = await fetch(`https://api.pexels.com/v1/search?query=${encodeURIComponent(promptValue)}&per_page=1`, {
+                headers: { Authorization: PEXELS_API_KEY }
+            });
+            const data = await res.json();
+            if (!data.photos || !data.photos.length) {
+                spinner.style.display = "none";
+                placeholderText.innerText = "No image found matching your keyword criteria.";
+                return;
+            }
+            targetUrl = data.photos[0].src.original;
+        } else {
+            placeholderText.innerText = "AI is computing your style parameters inside core matrix maps...";
+            const dimensions = fetchConfiguredDimensions(document.getElementById("aspectRatio").value);
+            const computedFullPrompt = engineType ? `${engineType} ${promptValue}` : promptValue;
+            targetUrl = `https://image.pollinations.ai/prompt/${encodeURIComponent(computedFullPrompt)}?width=${dimensions.w}&height=${dimensions.h}&nologo=true`;
+        }
+
+        // Fetch raw background file streaming 
+        const response = await fetch(targetUrl);
+        if(!response.ok) throw new Error("Network image context timeout");
+        
+        const imageBlob = await response.blob();
+
+        const reader = new FileReader();
+        reader.readAsDataURL(imageBlob);
+        reader.onloadend = function() {
+            const base64DataStream = reader.result;
+            const nativeBlobUrl = URL.createObjectURL(imageBlob);
+            
+            // Cache instantly into temporary state variables
+            localStorage.setItem("temp_url_cache", targetUrl);
+            localStorage.setItem("temp_base64_cache", base64DataStream);
+            localStorage.setItem("temp_native_blob", nativeBlobUrl);
+            
+            // Toggle view elements to show unlock trigger
+            spinner.style.display = "none";
+            placeholderText.style.display = "none";
+            unlockBtn.style.display = "inline-block";
+            document.getElementById("status").innerText = "Ready to Unlock!";
+        };
+    } catch (err) {
+        console.error(err);
+        spinner.style.display = "none";
+        placeholderText.innerText = "Your optimized creation will display here.";
+        document.getElementById("status").innerText = "Engine response failure or security drop. Try another keyword.";
+    }
 }
 
-const rawUrl = data.photos[0].src.original;
-const imgElement = document.getElementById("img");
-
-// Fetch the physical file bytes to write inside system storage
-const imageResponse = await fetch(rawUrl);
-const imageBlob = await imageResponse.blob();
-
-const reader = new FileReader();
-reader.readAsDataURL(imageBlob);
-reader.onloadend = function() {
-    const stringDataStream = reader.result;
+/* STAGE 2: AD INTERACTION HOOK (100% POPUP BYPASS METHOD) */
+function unlockImage() {
+    const cachedUrl = localStorage.getItem("temp_url_cache");
+    const cachedBase64 = localStorage.getItem("temp_base64_cache");
+    const cachedBlob = localStorage.getItem("temp_native_blob");
     
-    // Write data permanently onto user storage space disk hardware
-    localStorage.setItem("saved_pexels_url", rawUrl);
-    localStorage.setItem("saved_base64_data", stringDataStream);
+    if(!cachedUrl || !cachedBase64) return alert("Session timed out. Please re-execute processing.");
+
+    // Lock permanently to production cache
+    localStorage.setItem("saved_pexels_url", cachedUrl);
+    localStorage.setItem("saved_base64_data", cachedBase64);
+    if(cachedBlob) localStorage.setItem("saved_blob_url", cachedBlob);
     
-    // Assign view asset
-    imgElement.src = stringDataStream;
+    // Clear temporary caches
+    localStorage.removeItem("temp_url_cache");
+    localStorage.removeItem("temp_base64_cache");
+    localStorage.removeItem("temp_native_blob");
+
+    // Render output layout views immediately
+    document.getElementById("unlockBtn").style.display = "none";
+    
+    const imgElement = document.getElementById("img");
+    imgElement.src = cachedBase64;
     imgElement.style.display = "block";
-    document.getElementById("status").innerText = "Done";
+    
+    document.getElementById("copyBtn").style.display = "inline-block";
+    document.getElementById("downloadBtn").style.display = "inline-block";
+    document.getElementById("status").innerText = "Asset unlocked permanently!";
 
-    // Launch ad target safely
-    setTimeout(() => {
-        triggerGenerateAd();
-    }, 250);
-};
-
-} catch (err) {
-console.error(err);
-document.getElementById("status").innerText="Error generating image asset.";
+    // Fire Propeller ad instantly on direct user click context
+    if (generateAdCount < MAX_GENERATE_ADS) {
+        window.open(AD_URL, "_blank");
+        generateAdCount++;
+    } else {
+        window.open(AD_URL, "_blank"); 
+    }
 }
-}
 
-/* COPY + LIMITED ADS */
 function copy(){
-const savedSrcUrl = localStorage.getItem("saved_pexels_url");
-if(!savedSrcUrl) return alert("Generate an image first");
+    const savedSrcUrl = localStorage.getItem("saved_pexels_url");
+    if(!savedSrcUrl) return alert("Generate and unlock an image first");
 
-navigator.clipboard.writeText(savedSrcUrl);
-alert("Copied!");
-
-triggerGeneralAd();
+    navigator.clipboard.writeText(savedSrcUrl).then(() => {
+        alert("Direct URL link successfully copied to your device clipboard!");
+        triggerGeneralAd();
+    }).catch(() => {
+        alert("Copy processing failed. Try manually.");
+    });
 }
 
-/* DOWNLOAD FUNCTION */
+/* STAGE 3: SPLIT DELAY FOR NATIVE MOBILE DOWNLOAD ENGINE */
 async function downloadImg(){
-const savedBase64 = localStorage.getItem("saved_base64_data");
-if(!savedBase64) return alert("Generate an image first");
+    const savedBlob = localStorage.getItem("saved_blob_url");
+    const savedBase64 = localStorage.getItem("saved_base64_data");
+    
+    if(!savedBase64) return alert("Generate and unlock an image first");
 
-triggerGeneralAd();
-document.getElementById("status").innerText="Downloading...";
+    // 1. Launch Propeller general ad track immediately on execution click
+    triggerGeneralAd();
+    document.getElementById("status").innerText = "Redirecting secure system configurations...";
 
-try {
-const a = document.createElement("a");
-a.href = savedBase64;
-a.download = `ai-image-${Date.now()}.jpg`;
-document.body.appendChild(a);
-a.click();
-document.body.removeChild(a);
+    // 2. Pause 350ms to let mobile browser process the ad view, then push the download
+    setTimeout(() => {
+        try {
+            document.getElementById("status").innerText = "Downloading file...";
+            
+            const a = document.createElement("a");
+            a.href = savedBlob ? savedBlob : savedBase64; 
+            a.download = `image-asset-${Date.now()}.jpg`;
+            
+            a.style.display = "none";
+            document.body.appendChild(a);
+            a.click();
+            
+            setTimeout(() => {
+                document.body.removeChild(a);
+                document.getElementById("status").innerText = "Downloaded Successfully!";
+            }, 100);
 
-document.getElementById("status").innerText="Downloaded Successfully";
-} catch (error) {
-console.error(error);
-document.getElementById("status").innerText="Download failed.";
+        } catch (error) {
+            console.error(error);
+            document.getElementById("status").innerText = "Download error detected. Try copying URL instead.";
+        }
+    }, 350); 
 }
-}
-
 </script>
 
 </body>
