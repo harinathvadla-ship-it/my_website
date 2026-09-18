@@ -30,6 +30,9 @@
       gtag('config', 'G-XXXXXXXXXX');
     </script>
 
+    <!-- Monetag / Ad Network Head Integration Placeholder -->
+    <!-- Place your ad network verification or global head script tags here if required -->
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -124,6 +127,18 @@
             padding: 0 1rem;
         }
 
+        /* Ad Slot Styles */
+        .ad-slot {
+            background: #f1f5f9;
+            border: 2px dashed #cbd5e1;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
         /* Generator Tool Styles */
         .generator-card {
             background: var(--card-bg);
@@ -146,7 +161,7 @@
         .form-group label {
             display: block;
             font-weight: 650;
-            margin-bottom: 0.5srem;
+            margin-bottom: 0.5rem;
             font-size: 0.95rem;
         }
 
@@ -371,11 +386,17 @@
 
 <main class="container">
 
+    <!-- AD SLOT 1: Top Leaderboard (Directly below header/above tool) -->
+    <div class="ad-slot">
+        <!-- REPLACE THIS COMMENT WITH YOUR MONETAG / AD NETWORK SCRIPT TAG -->
+        <span>[ Advertisement Banner Slot 1 ]</span>
+    </div>
+
     <!-- =========================================================
          LIVE AI IMAGE GENERATOR TOOL
          ========================================================= -->
     <section class="generator-card" id="generator-tool">
-        <h2>✨ Free AI Image Generator Tool</h2>
+        <h2>⚡ Free AI Image Generator Tool</h2>
         <p>Type your description below, choose a visual style, and generate your custom AI graphic instantly right in your browser.</p>
         
         <div class="form-group">
@@ -407,6 +428,12 @@
             </div>
         </div>
     </section>
+
+    <!-- AD SLOT 2: Mid-Content Banner -->
+    <div class="ad-slot">
+        <!-- REPLACE THIS COMMENT WITH YOUR MONETAG / AD NETWORK SCRIPT TAG -->
+        <span>[ Advertisement Banner Slot 2 ]</span>
+    </div>
 
     <section class="intro">
         <h2>Complete Guide to AI Image Generation and Search-Friendly Content</h2>
@@ -648,6 +675,12 @@
 
         <a class="back-link" href="#generator-tool">↑ Back to Image Generator Tool</a>
     </article>
+
+    <!-- AD SLOT 3: Footer Banner -->
+    <div class="ad-slot">
+        <!-- REPLACE THIS COMMENT WITH YOUR MONETAG / AD NETWORK SCRIPT TAG -->
+        <span>[ Advertisement Banner Slot 3 ]</span>
+    </div>
 
 </main>
 
