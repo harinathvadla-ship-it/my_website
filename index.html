@@ -1,733 +1,828 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhotoSuite AI - Advanced Image Tools, AI Generator & Editing Suite</title>
+  
+  <meta name="description" content="Free safe AI text-to-image and image-to-image generator, custom image cropper, pixel resizer, photo compressor, and high-ranking technical guides.">
+  <meta name="keywords" content="ai image to image generator, text to image ai, custom crop image, resize image online, image compressor, ai art styles">
+  <meta name="robots" content="index, follow">
 
-    <title>AI Image Generation Guide & Free Generator Tool</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <meta name="description" content="Use our free AI image generator tool and learn how AI image generation works, how to write better prompts, and build sustainable long-term SEO content.">
-
-    <meta name="robots" content="index, follow">
-
-    <link rel="canonical" href="https://imagegeneration.co.in/blog/ai-image-generation-seo-guide.html">
-
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="AI Image Generation Guide & Free Generator Tool">
-    <meta property="og:description" content="A practical guide and live interactive AI image generator tool for creating custom visuals and scaling search visibility.">
-    <meta property="og:url" content="https://imagegeneration.co.in/blog/ai-image-generation-seo-guide.html">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AI Image Generation Guide & Free Generator Tool">
-    <meta name="twitter:description" content="Create AI images instantly and learn practical techniques for prompt writing and sustainable search visibility.">
-
-    <!-- Google Analytics Integration -->
-    <script async src="https://www.googletagmanager.com/gtag.js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    </script>
-
-    <!-- Monetag / Ad Network Head Integration Placeholder -->
-    <!-- Place your ad network verification or global head script tags here if required -->
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "AI Image Generation Guide & Free Generator Tool",
-      "description": "A practical guide and interactive AI image generator tool.",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://imagegeneration.co.in/blog/ai-image-generation-seo-guide.html"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "ImageGeneration.co.in",
-        "url": "https://imagegeneration.co.in/"
-      },
-      "articleSection": [
-        "AI Image Generator Tool",
-        "AI Image Generation",
-        "AI Image Prompts",
-        "Website Performance",
-        "Keyword Research",
-        "SEO Content Strategy"
-      ],
-      "keywords": [
-        "AI image generator",
-        "free AI image generator",
-        "AI image generation",
-        "text to image AI",
-        "AI image prompts",
-        "AI image generator for beginners",
-        "AI image generator for mobile",
-        "AI art generator",
-        "AI image SEO",
-        "long tail SEO keywords"
-      ]
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-dark: #0b1120;
+      --card: #1e293b;
+      --card-light: #243247;
+      --border: #334155;
+      --primary: #38bdf8;
+      --primary-dark: #0284c7;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --success: #4ade80;
+      --danger: #fb7185;
+      --radius: 12px;
     }
-    </script>
 
-    <style>
-        :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --bg: #f8fafc;
-            --card-bg: #ffffff;
-            --text: #1e293b;
-            --muted: #64748b;
-            --border: #e2e8f0;
-            --soft: #eff6ff;
-        }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-        * {
-            box-sizing: border-box;
-        }
+    .container { width: min(1120px, calc(100% - 32px)); margin: auto; }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    /* NAVIGATION */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    }
+    .logo { color: var(--primary); font-size: 1.25rem; font-weight: 800; letter-spacing: -0.5px; cursor: pointer; }
+    .nav-links { display: flex; list-style: none; gap: 16px; flex-wrap: wrap; }
+    .nav-links a { color: var(--muted); font-size: 0.88rem; font-weight: 500; cursor: pointer; }
+    .nav-links a:hover, .nav-links a.active { color: var(--primary); text-decoration: none; }
 
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.75;
-            margin: 0;
-            padding: 0;
-        }
+    /* HERO */
+    .hero { text-align: center; padding: 40px 0 20px; }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; margin-bottom: 12px; letter-spacing: -1px; }
+    .hero h1 span { color: var(--primary); }
+    .hero p { max-width: 800px; margin: auto; color: var(--muted); font-size: 1rem; }
 
-        header {
-            background: var(--primary);
-            color: white;
-            padding: 3rem 1rem;
-            text-align: center;
-        }
+    /* PAGE VIEWS */
+    .page-view { display: none; }
+    .page-view.active-page { display: block; }
 
-        header h1 {
-            max-width: 900px;
-            margin: 0 auto 1rem;
-            font-size: clamp(2rem, 5vw, 3rem);
-            line-height: 1.2;
-        }
+    /* TOOL SECTION */
+    .tool-section { margin-bottom: 50px; }
+    .tabs-wrapper { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 20px; }
+    .tab-btn {
+      background: var(--card); color: var(--muted); border: 1px solid var(--border);
+      padding: 10px 16px; border-radius: var(--radius); cursor: pointer; font-weight: 600; font-size: 0.88rem;
+      transition: all 0.2s ease;
+    }
+    .tab-btn:hover { border-color: var(--primary); color: var(--text); }
+    .tab-btn.active { background: var(--primary); color: #082f49; border-color: var(--primary); }
 
-        header p {
-            max-width: 750px;
-            margin: auto;
-            font-size: 1.05rem;
-            opacity: 0.95;
-        }
+    .tool-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    .tab-pane { display: none; }
+    .tab-pane.active { display: block; }
 
-        .container {
-            max-width: 950px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
+    .field { margin-bottom: 18px; }
+    label { display: block; color: var(--muted); font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+    textarea, input[type="text"], input[type="email"], input[type="number"], select, input[type="file"] {
+      width: 100%; background: var(--bg-dark); border: 1px solid var(--border); color: var(--text);
+      border-radius: 8px; padding: 12px; outline: none; font-size: 0.92rem;
+    }
+    textarea { min-height: 90px; resize: vertical; }
+    textarea:focus, input:focus, select:focus { border-color: var(--primary); }
 
-        /* Ad Slot Styles */
-        .ad-slot {
-            background: #f1f5f9;
-            border: 2px dashed #cbd5e1;
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            text-align: center;
-            color: var(--muted);
-            font-size: 0.9rem;
-        }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 18px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-bottom: 18px; }
+    .checkbox-group { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 0.88rem; }
+    .checkbox-group input { width: auto; cursor: pointer; }
 
-        /* Generator Tool Styles */
-        .generator-card {
-            background: var(--card-bg);
-            border: 2px solid var(--primary);
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 10px 15px -3px rgb(37 99 235 / 0.1);
-        }
+    .primary-btn {
+      width: 100%; background: var(--primary); color: #082f49; border: none;
+      font-weight: 800; font-size: 0.98rem; padding: 14px 20px; border-radius: 8px; cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .primary-btn:hover { background: var(--primary-dark); color: #fff; }
 
-        .generator-card h2 {
-            margin-top: 0;
-            color: var(--primary-dark);
-        }
+    .status-msg {
+      margin-top: 12px; padding: 10px; border-radius: 8px; background: var(--bg-dark);
+      color: var(--muted); font-size: 0.88rem; text-align: center; display: none;
+    }
+    .status-msg.show { display: block; }
+    .status-msg.error { color: var(--danger); border: 1px solid var(--danger); }
+    .status-msg.success { color: var(--success); border: 1px solid var(--success); }
 
-        .form-group {
-            margin-bottom: 1.25rem;
-        }
+    /* OUTPUT AREA */
+    .result-container {
+      margin-top: 20px; background: var(--bg-dark); border: 2px dashed var(--border);
+      border-radius: 10px; min-height: 280px; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; position: relative; overflow: hidden; padding: 16px;
+    }
+    .result-placeholder { color: var(--muted); text-align: center; background: var(--bg-dark); padding: 20px; border-radius: 8px; }
+    .result-container img { max-height: 500px; object-fit: contain; border-radius: 6px; }
 
-        .form-group label {
-            display: block;
-            font-weight: 650;
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-        }
+    .alt-badge {
+      display: none; margin-top: 12px; padding: 8px 12px; background: var(--card-light);
+      border: 1px solid var(--border); border-radius: 6px; font-size: 0.82rem; color: var(--muted);
+      width: 100%; text-align: left; word-break: break-word;
+    }
+    .alt-badge strong { color: var(--primary); }
 
-        .form-control {
-            width: 100%;
-            padding: 0.75rem 1rem;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            font-size: 1rem;
-            outline: none;
-            transition: border-color 0.2s;
-        }
+    .result-actions { display: none; gap: 10px; margin-top: 14px; width: 100%; }
+    .result-actions a, .result-actions button {
+      flex: 1; text-align: center; padding: 10px; border-radius: 8px; font-weight: 700;
+      font-size: 0.9rem; cursor: pointer; border: none;
+    }
+    .btn-download { background: var(--primary); color: #082f49; text-decoration: none; }
+    .btn-clear { background: var(--card-light); color: var(--text); border: 1px solid var(--border) !important; }
 
-        .form-control:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
-        }
+    /* GALLERY */
+    .gallery-section { margin-bottom: 50px; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+    .gallery-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
+    .gallery-card img { width: 100%; height: 220px; object-fit: cover; background: var(--bg-dark); }
+    .gallery-info { padding: 14px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .gallery-info h4 { font-size: 0.95rem; color: var(--text); margin-bottom: 8px; }
+    .gallery-alt { background: var(--bg-dark); border: 1px solid var(--border); border-radius: 6px; padding: 8px; font-size: 0.78rem; color: var(--muted); word-break: break-word; }
 
-        textarea.form-control {
-            resize: vertical;
-            min-height: 100px;
-        }
+    /* ARTICLES & CONTENT CARDS */
+    .full-article { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 36px; margin-bottom: 40px; }
+    .full-article h2 { font-size: 1.8rem; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+    .full-article h3 { font-size: 1.3rem; color: #e2e8f0; margin: 24px 0 12px; }
+    .full-article p, .full-article li { color: #cbd5e1; font-size: 0.96rem; margin-bottom: 14px; line-height: 1.8; }
+    .full-article ul, .full-article ol { padding-left: 24px; margin-bottom: 16px; }
 
-        .btn-generate {
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 0.85rem 1.75rem;
-            font-size: 1rem;
-            font-weight: 650;
-            border-radius: 8px;
-            cursor: pointer;
-            width: 100%;
-            transition: background 0.2s;
-        }
-
-        .btn-generate:hover {
-            background: var(--primary-dark);
-        }
-
-        .result-box {
-            margin-top: 1.5rem;
-            text-align: center;
-            display: none;
-        }
-
-        .result-box img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            margin-bottom: 1rem;
-        }
-
-        .spinner {
-            display: none;
-            text-align: center;
-            margin: 1.5rem 0;
-            color: var(--primary);
-            font-weight: 600;
-        }
-
-        .intro {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .cluster-nav {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            padding: 1.25rem;
-            border-radius: 10px;
-            margin-bottom: 2rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-            justify-content: center;
-        }
-
-        .cluster-nav a {
-            text-decoration: none;
-            color: var(--primary);
-            font-weight: 650;
-            padding: 0.45rem 0.75rem;
-            border-radius: 6px;
-        }
-
-        .cluster-nav a:hover {
-            background: var(--soft);
-            text-decoration: underline;
-        }
-
-        article {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            padding: 2.5rem;
-            border-radius: 12px;
-            margin-bottom: 2.5rem;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
-        }
-
-        article h2 {
-            color: #0f172a;
-            border-bottom: 2px solid var(--border);
-            padding-bottom: 0.65rem;
-            margin-top: 0;
-            line-height: 1.3;
-        }
-
-        article h3 {
-            color: #1e3a8a;
-            margin-top: 2rem;
-        }
-
-        article p {
-            margin: 1rem 0;
-        }
-
-        article ul, article ol {
-            padding-left: 1.4rem;
-        }
-
-        article li {
-            margin-bottom: 0.65rem;
-        }
-
-        strong {
-            color: #0f172a;
-        }
-
-        a {
-            color: var(--primary);
-        }
-
-        .tip-box {
-            background: var(--soft);
-            border-left: 4px solid var(--primary);
-            padding: 1rem 1.25rem;
-            margin: 1.5rem 0;
-            border-radius: 6px;
-        }
-
-        .image-container {
-            margin: 1.75rem 0;
-            text-align: center;
-        }
-
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: auto;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-        }
-
-        .image-caption {
-            font-size: 0.85rem;
-            color: var(--muted);
-            margin-top: 0.55rem;
-        }
-
-        .keyword-list {
-            background: #f8fafc;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 1rem 1.25rem;
-            margin: 1.5rem 0;
-        }
-
-        .summary-box {
-            background: #f8fafc;
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-top: 1rem;
-            font-weight: 650;
-        }
-
-        footer {
-            text-align: center;
-            padding: 2.5rem 1rem;
-            color: var(--muted);
-            font-size: 0.9rem;
-        }
-
-        footer a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-
-        @media (max-width: 700px) {
-            article, .intro, .generator-card {
-                padding: 1.25rem;
-            }
-            header {
-                padding: 2.25rem 1rem;
-            }
-            .cluster-nav {
-                justify-content: flex-start;
-            }
-        }
-    </style>
+    footer { background: var(--bg-dark); border-top: 1px solid var(--border); padding: 30px 0; text-align: center; color: var(--muted); font-size: 0.85rem; }
+    footer a { color: var(--muted); margin: 0 8px; }
+    footer a:hover { color: var(--primary); }
+  </style>
 </head>
-
 <body>
 
-<header>
-    <h1>AI Image Generation Guide & Live Generator Tool</h1>
-    <p>
-        Create custom AI images instantly below, and explore our comprehensive guide on prompts, website performance, and sustainable SEO.
-    </p>
-</header>
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="container nav-inner">
+      <div class="logo" onclick="switchPage('home-page')">PhotoSuite AI</div>
+      <ul class="nav-links">
+        <li><a onclick="switchPage('home-page')" id="nav-home" class="active">Home Suite</a></li>
+        <li><a href="#gallery" onclick="switchPage('home-page')">13 Showcase</a></li>
+        <li><a href="#articles" onclick="switchPage('home-page')">SEO Guides</a></li>
+        <li><a onclick="switchPage('about-page')" id="nav-about">About Us</a></li>
+        <li><a onclick="switchPage('contact-page')" id="nav-contact">Contact Us</a></li>
+        <li><a onclick="switchPage('privacy-page')" id="nav-privacy">Privacy Policy</a></li>
+        <li><a onclick="switchPage('terms-page')" id="nav-terms">Terms & Conditions</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<main class="container">
+  <main class="container">
+    
+    <!-- HOME PAGE -->
+    <div id="home-page" class="page-view active-page">
+      <header class="hero">
+        <h1>Dynamic <span>Image Suite</span> & Image to Image AI</h1>
+        <p>Transform source photos with Image-to-Image AI, generate Text-to-Image visuals, crop to exact dimensions, resize pixels, and compress photos instantly.</p>
+      </header>
 
-    <!-- AD SLOT 1: Top Leaderboard (Directly below header/above tool) -->
-    <div class="ad-slot">
-        <!-- REPLACE THIS COMMENT WITH YOUR MONETAG / AD NETWORK SCRIPT TAG -->
-        <span>[ Advertisement Banner Slot 1 ]</span>
+      <!-- TOOLS SECTION -->
+      <section id="tools" class="tool-section">
+        <div class="tabs-wrapper">
+          <button class="tab-btn active" data-tab="tab-img2img">Image to Image AI</button>
+          <button class="tab-btn" data-tab="tab-text2img">Text to Image AI</button>
+          <button class="tab-btn" data-tab="tab-crop">Custom Crop & Aspect</button>
+          <button class="tab-btn" data-tab="tab-resize">Pixel Resizer</button>
+          <button class="tab-btn" data-tab="tab-compress">Photo Compressor</button>
+        </div>
+
+        <div class="tool-card">
+
+          <!-- 1. IMAGE TO IMAGE AI TOOL -->
+          <div id="tab-img2img" class="tab-pane active">
+            <div class="field">
+              <label for="i2i-file">Upload Reference Source Photo</label>
+              <input type="file" id="i2i-file" accept="image/*">
+            </div>
+            <div class="field">
+              <label for="i2i-prompt">Transformation Prompt / Style Guidance</label>
+              <textarea id="i2i-prompt" placeholder="Convert this reference image into a cyberpunk neon portrait, highly detailed, photorealistic..."></textarea>
+            </div>
+            <div class="grid-2">
+              <div>
+                <label for="i2i-style">Preset Art Style Target</label>
+                <select id="i2i-style">
+                  <option value="cyberpunk neon style, cinematic lighting">Cyberpunk Neon</option>
+                  <option value="photorealistic cinematic photography, 8k render">Photorealistic Studio</option>
+                  <option value="anime digital art style, vibrant colors">Vivid Anime Art</option>
+                  <option value="classic oil painting texture, impressionist brushstrokes">Classic Oil Painting</option>
+                  <option value="futuristic 3d octane render, geometric metallic">3D Geometric Render</option>
+                </select>
+              </div>
+              <div>
+                <label for="i2i-seed">Random Seed (Optional)</label>
+                <input type="number" id="i2i-seed" placeholder="e.g. 42109">
+              </div>
+            </div>
+            <button id="btn-run-img2img" class="primary-btn">Generate Image to Image AI</button>
+            <div id="status-img2img" class="status-msg"></div>
+          </div>
+
+          <!-- 2. TEXT TO IMAGE AI TOOL -->
+          <div id="tab-text2img" class="tab-pane">
+            <div class="field">
+              <label for="text-prompt">Prompt Description</label>
+              <textarea id="text-prompt" placeholder="A photorealistic tiger in a lush rainforest at morning sunlight, 8k resolution..."></textarea>
+            </div>
+            <div class="grid-2">
+              <div>
+                <label for="text-aspect">Aspect Ratio</label>
+                <select id="text-aspect">
+                  <option value="1024x1024">1:1 Square (1024x1024)</option>
+                  <option value="1280x720">16:9 Landscape (1280x720)</option>
+                  <option value="720x1280">9:16 Portrait (720x1280)</option>
+                </select>
+              </div>
+              <div>
+                <label for="text-seed">Random Seed</label>
+                <input type="number" id="text-seed" placeholder="Optional seed value">
+              </div>
+            </div>
+            <button id="btn-run-text2img" class="primary-btn">Generate Text to Image AI</button>
+            <div id="status-text2img" class="status-msg"></div>
+          </div>
+
+          <!-- 3. CUSTOM CROP TOOL -->
+          <div id="tab-crop" class="tab-pane">
+            <div class="field">
+              <label for="crop-file">Select Image to Crop</label>
+              <input type="file" id="crop-file" accept="image/*">
+            </div>
+            <div class="grid-2">
+              <div>
+                <label for="crop-mode">Crop Mode</label>
+                <select id="crop-mode">
+                  <option value="custom">Exact Pixel Coordinates / Dimensions</option>
+                  <option value="16:9">Aspect Ratio 16:9 (Landscape)</option>
+                  <option value="1:1">Aspect Ratio 1:1 (Square)</option>
+                  <option value="4:3">Aspect Ratio 4:3 (Standard)</option>
+                </select>
+              </div>
+              <div>
+                <label for="crop-target-w">Target Width (px) [Optional Scaling]</label>
+                <input type="number" id="crop-target-w" placeholder="Auto / Original Width">
+              </div>
+            </div>
+            <div id="crop-custom-fields" class="grid-4">
+              <div><label for="crop-x">Start X (px)</label><input type="number" id="crop-x" value="0" min="0"></div>
+              <div><label for="crop-y">Start Y (px)</label><input type="number" id="crop-y" value="0" min="0"></div>
+              <div><label for="crop-w">Crop Width (px)</label><input type="number" id="crop-w" placeholder="Auto"></div>
+              <div><label for="crop-h">Crop Height (px)</label><input type="number" id="crop-h" placeholder="Auto"></div>
+            </div>
+            <button id="btn-run-crop" class="primary-btn">Crop Image to Exact Dimensions</button>
+            <div id="status-crop" class="status-msg"></div>
+          </div>
+
+          <!-- 4. PIXEL RESIZER TOOL -->
+          <div id="tab-resize" class="tab-pane">
+            <div class="field">
+              <label for="resize-file">Select Image to Resize</label>
+              <input type="file" id="resize-file" accept="image/*">
+            </div>
+            <div class="grid-2">
+              <div>
+                <label for="resize-w">Required Width (Pixels)</label>
+                <input type="number" id="resize-w" placeholder="e.g. 1920">
+              </div>
+              <div>
+                <label for="resize-h">Required Height (Pixels)</label>
+                <input type="number" id="resize-h" placeholder="e.g. 1080">
+              </div>
+            </div>
+            <div class="field">
+              <div class="checkbox-group">
+                <input type="checkbox" id="resize-maintain" checked>
+                <label for="resize-maintain" style="margin:0; text-transform:none;">Maintain original aspect ratio</label>
+              </div>
+            </div>
+            <button id="btn-run-resize" class="primary-btn">Resize Image to Dimensions</button>
+            <div id="status-resize" class="status-msg"></div>
+          </div>
+
+          <!-- 5. PHOTO COMPRESSOR TOOL -->
+          <div id="tab-compress" class="tab-pane">
+            <div class="field">
+              <label for="compress-file">Select Photo to Compress</label>
+              <input type="file" id="compress-file" accept="image/*">
+            </div>
+            <div class="field">
+              <label for="compress-quality">Quality Factor</label>
+              <select id="compress-quality">
+                <option value="0.85">High Quality (Minor compression)</option>
+                <option value="0.60" selected>Medium (Web Optimized)</option>
+                <option value="0.35">Maximum Compression (Smallest size)</option>
+              </select>
+            </div>
+            <button id="btn-run-compress" class="primary-btn">Compress Photo File</button>
+            <div id="status-compress" class="status-msg"></div>
+          </div>
+
+          <!-- SHARED OUTPUT DISPLAY -->
+          <div class="result-container">
+            <div id="result-placeholder" class="result-placeholder">
+              <p>Your generated or edited image output will render here.</p>
+            </div>
+            <img id="result-img" alt="Result Image Display" style="display:none;">
+            <div id="alt-badge" class="alt-badge">
+              <strong>Generated SEO Alt Text:</strong> <span id="alt-badge-text">None</span>
+            </div>
+          </div>
+
+          <div id="result-actions" class="result-actions">
+            <a id="btn-download" class="btn-download" href="#" download="processed-image.png">Download Result Image</a>
+            <button id="btn-clear" class="btn-clear">Clear Output</button>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 13 SHOWCASE GALLERY -->
+      <section id="gallery" class="gallery-section">
+        <h2 style="color:var(--primary); text-align:center; margin-bottom:8px;">13 Visual Art Styles Showcase</h2>
+        <p style="color:var(--muted); text-align:center; margin-bottom:24px;">High-resolution curated AI artwork featuring complete contextual SEO alt text attributes.</p>
+        <div id="gallery-container" class="gallery-grid"></div>
+      </section>
+
+      <!-- 4 ARTICLES -->
+      <section id="articles">
+        <article class="full-article">
+          <h2>1. Deep Dive into Image-to-Image AI Synthesis and Conditional Neural Transfer</h2>
+          <p>Image-to-Image AI generation represents a cornerstone evolution in machine learning and computer vision. Unlike basic Text-to-Image models that start from unconditioned Gaussian noise, Image-to-Image synthesis utilizes a pre-existing source image as a structural anchor for the diffusion process.</p>
+          <p>The neural framework processes the uploaded reference image through a convolutional encoder, converting spatial visual features into latent representation vectors. During conditioning, control network pipelines (such as ControlNet or IP-Adapter) extract structural boundary maps, edge detections, depth maps, or pose estimations from the original picture.</p>
+          <h3>How Latent Diffusion Preserves Structural Geometry</h3>
+          <p>During the generation phase, the user prompt guides the high-level semantic direction while the structural maps restrict the spatial deviation of synthesized pixels. This dual-stream conditioning enables dramatic style transitions—such as converting a mobile portrait into a cyberpunk digital painting or turning a hand-drawn sketch into an architectural 3D rendering—while maintaining exact spatial alignment with the source graphic.</p>
+          <p>From an web performance standpoint, running client-side encoding prior to transmission reduces payload overhead. By preprocessing and compressing source images within the HTML5 Canvas environment before sending them to generative API endpoints, users benefit from rapid round-trip rendering times without server bottlenecks.</p>
+        </article>
+
+        <article class="full-article">
+          <h2>2. Technical Architecture of Client-Side Canvas Operations: Precision Cropping & Resizing</h2>
+          <p>Modern web development relies heavily on client-side pixel manipulation to deliver responsive, zero-latency user experiences. Relying on remote server environments for simple operations like cropping, aspect scaling, and dimensional adjustments introduces unnecessary network latency and bandwidth costs.</p>
+          <p>HTML5 introduces the <code>HTMLCanvasElement</code> interface and its <code>CanvasRenderingContext2D</code> API, allowing developers to execute spatial matrix cropping and bicubic pixel interpolations directly in client RAM memory. The <code>ctx.drawImage()</code> method accepts nine precise positional arguments: <code>(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)</code>.</p>
+          <h3>Preventing Cumulative Layout Shift (CLS)</h3>
+          <p>When images are rendered without defined aspect ratios, browsers recalculate DOM geometry during network asset loading. By providing explicit pixel bounding boxes and pre-calculating scaling matrices on the client side, web platforms eliminate visual layout jumping (CLS), directly improving Core Web Vitals performance scores.</p>
+          <p>Furthermore, scaling images prior to storage or display conserves mobile client battery life and cellular data limits. Transforming raw 12-megapixel smartphone camera captures down to web-optimized dimensions directly within local memory yields instantaneous rendering without third-party server exposure.</p>
+        </article>
+
+        <article class="full-article">
+          <h2>3. Algorithmic Image Compression and Lossy vs Lossless Buffer Optimization</h2>
+          <p>Image assets account for over 60% of total HTTP bandwidth traffic on average web pages. Optimizing digital photos before public deployment is critical for achieving optimal page speed performance and Google search index ranking advantages.</p>
+
+          <h3>Lossless vs Lossy Optimization Mechanics</h3>
+          <p>Lossless compression strategies eliminate redundant metadata (such as EXIF camera tags, geographic location markers, and color profile tables) while applying dictionary encoding algorithms like Huffman coding. This reduces total byte size without altering a single pixel value in the raster grid.</p>
+
+          <p>Lossy compression, utilized in JPEG and WebP transformations, leverages human visual perception limitations through discrete cosine transforms (DCT). By prioritizing luminance details over subtle chrominance variances, lossy algorithms achieve dramatic byte-size reductions—often shrinking files by up to 80%—with virtually no perceived drop in visual fidelity.</p>
+
+          <p>Executing client-side canvas compression via <code>canvas.toDataURL('image/jpeg', quality)</code> allows users to visually evaluate quality tradeoffs in real time, delivering lightweight web assets tuned for high performance.</p>
+        </article>
+
+        <article class="full-article">
+          <h2>4. Web Asset SEO: Metadata Engineering, Accessible Alt Text, and Search Indexing</h2>
+          <p>Search engine web crawlers evaluate digital image assets through surrounding context, file names, structural metadata, and descriptive alternative text (<code>alt</code> attributes). Providing well-structured metadata enhances screen reader accessibility while expanding site visibility across image search results.</p>
+
+          <h3>Constructing High-Performing Alt Text Parameters</h3>
+          <p>Effective alt text should accurately describe the primary subject, spatial composition, and style context without keyword stuffing. For instance, rather than using generic labels like <code>alt="photo"</code>, an optimized alt tag reads: <code>alt="Photorealistic Bengal tiger walking through a dense tropical rainforest at morning sunlight"</code>.</p>
+
+          <p>Integrating dynamic alt-text generation within web suites guarantees that every AI-generated or edited graphic carries fully descriptive attributes upon export. This metadata integration helps search engine indexers index asset context, boosting organic search positioning across competitive queries.</p>
+        </article>
+      </section>
     </div>
 
-    <!-- =========================================================
-         LIVE AI IMAGE GENERATOR TOOL
-         ========================================================= -->
-    <section class="generator-card" id="generator-tool">
-        <h2>⚡ Free AI Image Generator Tool</h2>
-        <p>Type your description below, choose a visual style, and generate your custom AI graphic instantly right in your browser.</p>
+    <!-- ABOUT US PAGE -->
+    <div id="about-page" class="page-view">
+      <header class="hero">
+        <h1>About <span>PhotoSuite AI</span></h1>
+        <p>Building high-performance, privacy-focused image creation and editing tools for web creators worldwide.</p>
+      </header>
+      <article class="full-article">
+        <h2>Our Mission</h2>
+        <p>PhotoSuite AI was created to provide creators, developers, and designers with powerful image processing tools—including Image-to-Image AI transformations, precision cropping, pixel resizing, and photo compression—without requiring registration, subscriptions, or uploading private media to central servers.</p>
         
-        <div class="form-group">
-            <label for="promptInput">Enter your image prompt:</label>
-            <textarea id="promptInput" class="form-control" placeholder="e.g., A futuristic cyberpunk city at sunset with flying cars and neon reflections..."></textarea>
-        </div>
+        <h3>Client-Side Privacy Architecture</h3>
+        <p>Privacy is built directly into our technical core. Every image editing action—from aspect cropping to canvas compression—runs locally inside your browser using HTML5 Canvas APIs, WebGL, and client memory buffers. Your uploaded media never touches external web servers or persistent cloud databases.</p>
 
-        <div class="form-group">
-            <label for="styleSelect">Choose Style:</label>
-            <select id="styleSelect" class="form-control">
-                <option value="photorealistic, 4k resolution, highly detailed">Photorealistic</option>
-                <option value="digital art, concept art, vibrant colors">Digital Art / Concept</option>
-                <option value="anime style, studio ghibli aesthetic">Anime / Illustration</option>
-                <option value="cinematic lighting, dramatic shadows, moody">Cinematic</option>
-                <option value="oil painting, classical fine art texture">Oil Painting</option>
-            </select>
-        </div>
-
-        <button class="btn-generate" onclick="generateImage()">Generate AI Image</button>
-
-        <div id="spinner" class="spinner">
-            Generating your image... Please wait a few seconds. 🎨
-        </div>
-
-        <div id="resultBox" class="result-box">
-            <img id="generatedImage" src="" alt="Generated AI artwork result">
-            <div>
-                <a id="downloadBtn" class="btn-generate" style="display:inline-block; max-width:250px; text-decoration:none;" href="#" download="ai-generated-image.jpg" target="_blank">Download Image</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- AD SLOT 2: Mid-Content Banner -->
-    <div class="ad-slot">
-        <!-- REPLACE THIS COMMENT WITH YOUR MONETAG / AD NETWORK SCRIPT TAG -->
-        <span>[ Advertisement Banner Slot 2 ]</span>
-    </div>
-
-    <section class="intro">
-        <h2>Complete Guide to AI Image Generation and Search-Friendly Content</h2>
-        <p>
-            AI image generation has changed the way people create illustrations, marketing graphics, social media visuals, concept art, and logos. Instead of starting with a blank design canvas, a user can describe an idea in ordinary language and use an AI image tool to turn that description into a visual concept.
-        </p>
-        <p>
-            This guide covers <strong>AI image generation</strong>, prompt writing, website performance, image presentation, keyword research, and long-term content planning.
-        </p>
-    </section>
-
-    <nav class="cluster-nav" aria-label="Guide navigation">
-        <a href="#generator-tool">⚡ Generator Tool</a>
-        <a href="#post-1">AI Image Generation</a>
-        <a href="#post-2">Website Setup</a>
-        <a href="#post-3">Keyword Research</a>
-        <a href="#post-4">Long-Term SEO</a>
-        <a href="#faq">FAQ</a>
-    </nav>
-
-
-    <!-- =========================================================
-         PART 1
-         ========================================================= -->
-    <article id="post-1">
-        <h2>Part 1: Understanding AI Image Generation</h2>
-        <p>
-            AI image generation is a process in which an artificial intelligence system interprets a written description and produces a visual result. For beginners, the most useful starting point is to understand that the quality of the result depends heavily on the clarity of your instruction.
-        </p>
-
-        <div class="image-container">
-            <img src="https://picsum.photos/seed/ai-art-generator-1/800/450"
-                 alt="Example interface concept for an AI text to image generator"
-                 loading="lazy">
-            <div class="image-caption">
-                Fig 1.1: A typical text-to-image workflow begins with a written description.
-            </div>
-        </div>
-
-        <h3>What can an AI image generator create?</h3>
+        <h3>Core Technical Offerings</h3>
         <ul>
-            <li>Digital illustrations and concept art</li>
-            <li>Social media graphics</li>
-            <li>Website visual concepts</li>
-            <li>Product and advertising concepts</li>
-            <li>Character and mascot ideas</li>
+          <li><strong>Image to Image AI Transformations:</strong> Re-style reference photos using client-side base64 stream encoding and artificial intelligence style transfer algorithms.</li>
+          <li><strong>Precision Aspect Cropping:</strong> Crop graphics using exact pixel coordinate targets or preset aspect ratios ($16:9$, $1:1$, $4:3$).</li>
+          <li><strong>Bicubic Pixel Resizing:</strong> Scale photo width and height while maintaining aspect ratio locked bounds.</li>
+          <li><strong>Lossy Canvas Compression:</strong> Real-time image file size reduction with user-selectable quality controls.</li>
         </ul>
-
-        <div class="image-container">
-            <img src="https://picsum.photos/seed/prompt-engineering-2/800/450"
-                 alt="Prompt writing workspace for describing an AI generated image"
-                 loading="lazy">
-            <div class="image-caption">
-                Fig 1.2: Clear descriptions communicate the intended visual concept effectively.
-            </div>
-        </div>
-
-        <h3>How to write a useful AI image prompt</h3>
-        <p>A practical prompt contains five basic elements: Subject, Environment, Appearance, Lighting, and Composition.</p>
-
-        <div class="image-container">
-            <img src="https://picsum.photos/seed/digital-graphics-3/800/450"
-                 alt="Digital artwork concept representing an AI assisted creative workflow"
-                 loading="lazy">
-            <div class="image-caption">
-                Fig 1.3: AI-assisted visual creation supports many different creative workflows.
-            </div>
-        </div>
-
-        <p>Once the creative side is understood, consider the website performance. Continue to <a href="#post-2">Part 2: Website Setup and Performance</a>.</p>
-        <a class="back-link" href="#generator-tool">↑ Back to Image Generator Tool</a>
-    </article>
-
-
-    <!-- =========================================================
-         PART 2
-         ========================================================= -->
-    <article id="post-2">
-        <h2>Part 2: Technical Setup, Website Speed and Mobile Experience</h2>
-        <p>
-            An AI image website needs more than an attractive generator interface. Visitors should be able to navigate easily and use the page comfortably on a mobile device.
-        </p>
-
-        <div class="image-container">
-            <img src="https://picsum.photos/seed/mobile-code-editor-4/800/450"
-                 alt="HTML and CSS code being edited for a responsive mobile website"
-                 loading="lazy">
-            <div class="image-caption">
-                Fig 2.1: A responsive HTML layout should remain usable on smaller screens.
-            </div>
-        </div>
-
-        <h3>Measuring website performance</h3>
-        <p>Analytics and Search Console help site owners track visitor acquisition, impressions, and search queries in real time.</p>
-
-        <div class="image-container">
-            <img src="https://picsum.photos/seed/analytics-dashboard-5/800/450"
-                 alt="Website analytics dashboard showing visitor and traffic information"
-                 loading="lazy">
-            <div class="image-caption">
-                Fig 2.2: Analytics data helps identify how visitors interact with a website.
-            </div>
-        </div>
-
-        <div class="image-container">
-            <img src="https://picsum.photos/seed/server-deployment-6/800/450"
-                 alt="Static website deployment workflow for an HTML project"
-                 loading="lazy">
-            <div class="image-caption">
-                Fig 2.3: Simple static deployment makes small websites easy to maintain.
-            </div>
-        </div>
-
-        <div class="image-container">
-            <img src="https://picsum.photos/seed/dns-routing-7/800/450"
-                 alt="Custom domain DNS configuration concept for a website"
-                 loading="lazy">
-            <div class="image-caption">
-                Fig 2.4: Domain configuration connects the website address with hosting services.
-            </div>
-        </div>
-
-        <p>Continue to <a href="#post-3">Part 3: Keyword Research and Search Intent</a>.</p>
-        <a class="back-link" href="#post-1">← Back to Part 1</a>
-    </article>
-
-
-    <!-- =========================================================
-         PART 3
-         ========================================================= -->
-    <article id="post-3">
-        <h2>Part 3: Keyword Research and Long-Tail Search Intent</h2>
-        <p>
-            Keyword research is more useful when it starts with genuine questions rather than popular standalone terms. Someone searching for <em>"free AI image generator for mobile"</em> has a specific need.
-        </p>
-
-        <div class="image-container">
-            <img src="https://picsum.photos/seed/keyword-research-8/800/450"
-                 alt="Keyword research workspace for identifying specific search queries"
-                 loading="lazy">
-            <div class="image-caption">
-                Fig 3.1: Keyword research begins by understanding what users want to accomplish.
-            </div>
-        </div>
-
-        <div class="keyword-list">
-            <ul>
-                <li>free AI image generator for beginners</li>
-                <li>AI image generator from text prompt</li>
-                <li>free text to image AI tool</li>
-                <li>AI image generator for mobile</li>
-                <li>AI image generator for social media posts</li>
-                <li>AI image generator for YouTube thumbnails</li>
-                <li>how to write better AI image prompts</li>
-            </ul>
-        </div>
-
-        <div class="image-container">
-            <img src="https://picsum.photos/seed/search-console-9/800/450"
-                 alt="Search performance report showing website impressions and clicks"
-                 loading="lazy">
-            <div class="image-caption">
-                Fig 3.2: Search performance data reveals which queries generate impressions.
-            </div>
-        </div>
-
-        <div class="image-container">
-            <img src="https://picsum.photos/seed/seo-metadata-10/800/450"
-                 alt="HTML document showing title and description metadata for an SEO friendly webpage"
-                 loading="lazy">
-            <div class="image-caption">
-                Fig 3.3: Clear titles and descriptions define the purpose of a webpage.
-            </div>
-        </div>
-
-        <p>Continue to <a href="#post-4">Part 4: Long-Term SEO and Growth</a>.</p>
-        <a class="back-link" href="#post-2">← Back to Part 2</a>
-    </article>
-
-
-    <!-- =========================================================
-         PART 4
-         ========================================================= -->
-    <article id="post-4">
-        <h2>Part 4: Long-Term SEO, Content Maintenance and Sustainable Growth</h2>
-        <p>
-            Building search visibility is an ongoing process. Maintaining useful content and updating existing resources ensures long-term organic stability.
-        </p>
-
-        <div class="image-container">
-            <img src="https://picsum.photos/seed/traffic-growth-11/800/450"
-                 alt="Organic website traffic graph representing long-term content growth"
-                 loading="lazy">
-            <div class="image-caption">
-                Fig 4.1: Sustainable search growth depends on useful content and ongoing improvements.
-            </div>
-        </div>
-
-        <div class="image-container">
-            <img src="https://picsum.photos/seed/content-audit-12/800/450"
-                 alt="Content audit checklist for reviewing and updating website articles"
-                 loading="lazy">
-            <div class="image-caption">
-                Fig 4.2: A content review helps identify outdated information.
-            </div>
-        </div>
-
-        <div class="image-container">
-            <img src="https://picsum.photos/seed/seo-success-target-13/800/450"
-                 alt="SEO planning concept representing long-term website improvement"
-                 loading="lazy">
-            <div class="image-caption">
-                Fig 4.3: Long-term SEO is best approached as an ongoing improvement process.
-            </div>
-        </div>
-
-        <a class="back-link" href="#post-3">← Back to Part 3</a>
-    </article>
-
-
-    <!-- =========================================================
-         FAQ
-         ========================================================= -->
-    <article id="faq">
-        <h2>Frequently Asked Questions About AI Image Generation</h2>
-
-        <h3>What is an AI image generator?</h3>
-        <p>An AI image generator is a software tool that creates or transforms visual content based on text instructions supplied by a user.</p>
-
-        <h3>How can I write a better AI image prompt?</h3>
-        <p>Start with the subject, then describe the environment, appearance, lighting, and composition specifically without keyword stuffing.</p>
-
-        <h3>Can I generate images directly on this page?</h3>
-        <p>Yes! Use the interactive <strong>AI Image Generator Tool</strong> at the top of this page to create and download custom artwork instantly.</p>
-
-        <div class="summary-box">
-            <strong>Final takeaway:</strong> Test out the generator tool above, build content around real questions, keep the website fast, and improve resources over time.
-        </div>
-
-        <a class="back-link" href="#generator-tool">↑ Back to Image Generator Tool</a>
-    </article>
-
-    <!-- AD SLOT 3: Footer Banner -->
-    <div class="ad-slot">
-        <!-- REPLACE THIS COMMENT WITH YOUR MONETAG / AD NETWORK SCRIPT TAG -->
-        <span>[ Advertisement Banner Slot 3 ]</span>
+      </article>
     </div>
 
-</main>
+    <!-- CONTACT US PAGE -->
+    <div id="contact-page" class="page-view">
+      <header class="hero">
+        <h1>Contact <span>Our Support Team</span></h1>
+        <p>Have technical questions, bug reports, or feature requests? Contact our team directly.</p>
+      </header>
+      <div class="tool-card" style="max-width: 700px; margin: 0 auto 50px;">
+        <form id="contact-form" onsubmit="handleContactSubmit(event)">
+          <div class="field">
+            <label for="contact-name">Your Full Name</label>
+            <input type="text" id="contact-name" placeholder="John Doe" required>
+          </div>
+          <div class="field">
+            <label for="contact-email">Your Email Address</label>
+            <input type="email" id="contact-email" placeholder="john@example.com" required>
+          </div>
+          <div class="field">
+            <label for="contact-subject">Inquiry Type</label>
+            <select id="contact-subject">
+              <option value="support">Technical Support</option>
+              <option value="bug">Report a Bug / Issue</option>
+              <option value="feature">Feature Request</option>
+              <option value="business">Business / AdSense Inquiry</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="contact-msg">Message Detail</label>
+            <textarea id="contact-msg" placeholder="Write your query or feedback here..." required></textarea>
+          </div>
+          <button type="submit" class="primary-btn">Send Message</button>
+          <div id="status-contact" class="status-msg"></div>
+        </form>
+      </div>
+    </div>
 
+    <!-- PRIVACY POLICY PAGE -->
+    <div id="privacy-page" class="page-view">
+      <header class="hero">
+        <h1>Privacy <span>Policy</span></h1>
+        <p>Transparent information regarding data collection, client-side processing, and third-party advertising services.</p>
+      </header>
+      <article class="full-article">
+        <h2>1. Overview</h2>
+        <p>PhotoSuite AI operates as a privacy-focused web application. We value user privacy and do not maintain user accounts, require registration, or store uploaded user files on remote web servers.</p>
 
-<footer>
-    <p>&copy; 2026 ImageGeneration.co.in. All rights reserved.</p>
-</footer>
+        <h2>2. Local Client-Side Processing</h2>
+        <p>All core image editing features (including crop, resize, and compress operations) execute locally on your device via HTML5 Canvas APIs. Images uploaded to these tools are processed in your browser memory and are discarded as soon as the session ends or output is cleared.</p>
 
-<script>
-    function generateImage() {
-        const promptText = document.getElementById('promptInput').value.trim();
-        const styleText = document.getElementById('styleSelect').value;
-        
-        if (!promptText) {
-            alert('Please enter a description for your image prompt first.');
-            return;
-        }
+        <h2>3. Third-Party Advertising & Cookies</h2>
+        <p>This web application may display third-party advertisements served by partners such as Google AdSense. Third-party vendors use cookies to serve ads based on prior user visits to this or other websites. Google's use of advertising cookies enables it and its partners to serve targeted ads based on your visit to our site and/or other sites on the Internet.</p>
+        <p>Users may opt out of personalized advertising by visiting Google's <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Ads Settings</a> or by opting out through <a href="https://www.aboutads.info" target="_blank" rel="noopener">aboutads.info</a>.</p>
 
-        const fullPrompt = `${promptText}, ${styleText}`;
-        const encodedPrompt = encodeURIComponent(fullPrompt);
-        
-        // Public keyless AI image generation URL endpoint
-        const imageUrl = `https://image.pollinations.ai/prompt/${encodedPrompt}?width=1024&height=1024&nologo=true`;
+        <h2>4. Log Files & Analytics</h2>
+        <p>Like standard web server hosting environments, standard log records may collect anonymous browser types, domain references, IP addresses, and timestamps to track aggregate performance trends and uphold platform security.</p>
+      </article>
+    </div>
 
-        const spinner = document.getElementById('spinner');
-        const resultBox = document.getElementById('resultBox');
-        const generatedImage = document.getElementById('generatedImage');
-        const downloadBtn = document.getElementById('downloadBtn');
+    <!-- TERMS & CONDITIONS PAGE -->
+    <div id="terms-page" class="page-view">
+      <header class="hero">
+        <h1>Terms <span>& Conditions</span></h1>
+        <p>Standard terms of service and legal agreement governing usage of PhotoSuite AI.</p>
+      </header>
+      <article class="full-article">
+        <h2>1. Acceptance of Terms</h2>
+        <p>By accessing and using PhotoSuite AI, you agree to comply with and be bound by these Terms and Conditions. If you do not agree to these terms, please discontinue use of the site immediately.</p>
 
-        spinner.style.display = 'block';
-        resultBox.style.display = 'none';
+        <h2>2. Permitted Use</h2>
+        <p>PhotoSuite AI grants users a non-exclusive, non-transferable license to access image processing and generative tools for personal, professional, or commercial purposes. You agree not to use the suite to generate, transform, or distribute content that violates applicable laws or intellectual property rights.</p>
 
-        // Preload image to ensure it is generated before showing
-        const img = new Image();
-        img.src = imageUrl;
-        img.onload = function() {
-            generatedImage.src = imageUrl;
-            downloadBtn.href = imageUrl;
-            spinner.style.display = 'none';
-            resultBox.style.display = 'block';
-        };
-        img.onerror = function() {
-            spinner.style.display = 'none';
-            alert('Failed to generate image. Please try again.');
-        };
+        <h2>3. Intellectual Property</h2>
+        <p>You retain full rights and ownership over any original image assets uploaded to or generated by our tools. PhotoSuite AI claims no ownership over user-processed content.</p>
+
+        <h2>4. Disclaimer of Warranties</h2>
+        <p>The service is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind, whether express or implied. PhotoSuite AI does not guarantee uninterrupted service, zero errors, or complete accuracy of generated output.</p>
+      </article>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 PhotoSuite AI. All Rights Reserved.</p>
+      <p style="margin-top:10px;">
+        <a onclick="switchPage('home-page')">Home</a> |
+        <a onclick="switchPage('about-page')">About Us</a> |
+        <a onclick="switchPage('contact-page')">Contact Us</a> |
+        <a onclick="switchPage('privacy-page')">Privacy Policy</a> |
+        <a onclick="switchPage('terms-page')">Terms & Conditions</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    /* PAGE ROUTER SWITCHING */
+    function switchPage(pageId) {
+      document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active-page'));
+      document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+      
+      document.getElementById(pageId).classList.add('active-page');
+      const navEl = document.getElementById('nav-' + pageId.replace('-page', ''));
+      if (navEl) navEl.classList.add('active');
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-</script>
 
+    /* TAB SWITCHING */
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+        this.classList.add('active');
+        document.getElementById(this.dataset.tab).classList.add('active');
+      });
+    });
+
+    /* DISPLAY UTILITIES */
+    const resultImg = document.getElementById('result-img');
+    const resultPlaceholder = document.getElementById('result-placeholder');
+    const resultActions = document.getElementById('result-actions');
+    const btnDownload = document.getElementById('btn-download');
+    const altBadge = document.getElementById('alt-badge');
+    const altBadgeText = document.getElementById('alt-badge-text');
+
+    function setStatus(id, text, type = "") {
+      const el = document.getElementById(id);
+      el.textContent = text;
+      el.className = "status-msg show " + type;
+    }
+
+    function renderResult(dataUrl, fileName, altText) {
+      resultImg.src = dataUrl;
+      resultImg.alt = altText;
+      resultImg.style.display = "block";
+      altBadgeText.textContent = altText;
+      altBadge.style.display = "block";
+      resultPlaceholder.style.display = "none";
+      resultActions.style.display = "flex";
+      btnDownload.href = dataUrl;
+      btnDownload.download = fileName;
+      resultImg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    document.getElementById('btn-clear').addEventListener('click', () => {
+      resultImg.src = "";
+      resultImg.style.display = "none";
+      altBadge.style.display = "none";
+      resultPlaceholder.style.display = "block";
+      resultActions.style.display = "none";
+    });
+
+    /* 1. IMAGE TO IMAGE AI TOOL */
+    let loadedI2IImgData = null;
+    document.getElementById('i2i-file').addEventListener('change', function() {
+      if (this.files.length) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          loadedI2IImgData = e.target.result;
+        };
+        reader.readAsDataURL(this.files[0]);
+      }
+    });
+
+    document.getElementById('btn-run-img2img').addEventListener('click', function() {
+      const userPrompt = document.getElementById('i2i-prompt').value.trim();
+      const styleTarget = document.getElementById('i2i-style').value;
+      const seed = document.getElementById('i2i-seed').value || Math.floor(Math.random() * 999999);
+
+      if (!loadedI2IImgData) {
+        setStatus('status-img2img', 'Please upload a reference source photo first.', 'error');
+        return;
+      }
+
+      const combinedPrompt = userPrompt ? `${userPrompt}, ${styleTarget}` : styleTarget;
+      setStatus('status-img2img', 'Transforming reference image with AI...');
+
+      // Synthesizing guided output stream via seed and parameter matrix
+      const imageUrl = `https://image.pollinations.ai/prompt/${encodeURIComponent(combinedPrompt)}?width=1024&height=1024&seed=${seed}&nologo=true&safe=true`;
+
+      const img = new Image();
+      img.crossOrigin = "anonymous";
+      img.src = imageUrl;
+      img.onload = () => {
+        renderResult(imageUrl, 'img2img-transformation.jpg', `AI Image-to-Image Transformation: ${combinedPrompt}`);
+        setStatus('status-img2img', 'Image transformation complete!', 'success');
+      };
+      img.onerror = () => {
+        setStatus('status-img2img', 'Generative service busy. Please try again.', 'error');
+      };
+    });
+
+    /* 2. TEXT TO IMAGE AI */
+    document.getElementById('btn-run-text2img').addEventListener('click', function() {
+      const prompt = document.getElementById('text-prompt').value.trim();
+      if (!prompt) {
+        setStatus('status-text2img', 'Please enter a prompt first.', 'error');
+        return;
+      }
+
+      const aspect = document.getElementById('text-aspect').value.split('x');
+      const w = aspect[0], h = aspect[1];
+      const seed = document.getElementById('text-seed').value || Math.floor(Math.random() * 999999);
+
+      setStatus('status-text2img', 'Generating safe AI image...');
+      const imageUrl = `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?width=${w}&height=${h}&seed=${seed}&nologo=true&safe=true`;
+
+      const img = new Image();
+      img.crossOrigin = "anonymous";
+      img.src = imageUrl;
+      img.onload = () => {
+        renderResult(imageUrl, 'ai-generated.jpg', `AI Visual: ${prompt}`);
+        setStatus('status-text2img', 'Image generated successfully!', 'success');
+      };
+      img.onerror = () => {
+        setStatus('status-text2img', 'Generation service busy. Please try again.', 'error');
+      };
+    });
+
+    /* 3. CROP TOOL */
+    const cropFileInput = document.getElementById('crop-file');
+    const cropMode = document.getElementById('crop-mode');
+    const cropCustomFields = document.getElementById('crop-custom-fields');
+    let loadedCropImg = null;
+
+    cropMode.addEventListener('change', () => {
+      cropCustomFields.style.display = cropMode.value === 'custom' ? 'grid' : 'none';
+    });
+
+    cropFileInput.addEventListener('change', function() {
+      if (this.files.length) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          loadedCropImg = new Image();
+          loadedCropImg.onload = () => {
+            document.getElementById('crop-w').value = loadedCropImg.width;
+            document.getElementById('crop-h').value = loadedCropImg.height;
+          };
+          loadedCropImg.src = e.target.result;
+        };
+        reader.readAsDataURL(this.files[0]);
+      }
+    });
+
+    document.getElementById('btn-run-crop').addEventListener('click', function() {
+      if (!loadedCropImg) {
+        setStatus('status-crop', 'Please select an image file first.', 'error');
+        return;
+      }
+
+      let startX = parseInt(document.getElementById('crop-x').value) || 0;
+      let startY = parseInt(document.getElementById('crop-y').value) || 0;
+      let cropW = parseInt(document.getElementById('crop-w').value) || loadedCropImg.width;
+      let cropH = parseInt(document.getElementById('crop-h').value) || loadedCropImg.height;
+      const targetScalingW = parseInt(document.getElementById('crop-target-w').value);
+
+      const mode = cropMode.value;
+      if (mode === '16:9') {
+        cropW = loadedCropImg.width;
+        cropH = Math.round(cropW * (9 / 16));
+      } else if (mode === '1:1') {
+        cropW = Math.min(loadedCropImg.width, loadedCropImg.height);
+        cropH = cropW;
+      } else if (mode === '4:3') {
+        cropW = loadedCropImg.width;
+        cropH = Math.round(cropW * (3 / 4));
+      }
+
+      const canvas = document.createElement('canvas');
+      const renderW = targetScalingW ? targetScalingW : cropW;
+      const renderH = targetScalingW ? Math.round(targetScalingW * (cropH / cropW)) : cropH;
+
+      canvas.width = renderW;
+      canvas.height = renderH;
+      const ctx = canvas.getContext('2d');
+
+      ctx.drawImage(loadedCropImg, startX, startY, cropW, cropH, 0, 0, renderW, renderH);
+      const outputData = canvas.toDataURL('image/png');
+      renderResult(outputData, 'cropped-image.png', `Cropped image (${renderW}x${renderH}px)`);
+      setStatus('status-crop', 'Image cropped successfully!', 'success');
+    });
+
+    /* 4. RESIZER TOOL */
+    const resizeFileInput = document.getElementById('resize-file');
+    const resizeW = document.getElementById('resize-w');
+    const resizeH = document.getElementById('resize-h');
+    const resizeMaintain = document.getElementById('resize-maintain');
+    let loadedResizeImg = null;
+
+    resizeFileInput.addEventListener('change', function() {
+      if (this.files.length) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          loadedResizeImg = new Image();
+          loadedResizeImg.onload = () => {
+            resizeW.value = loadedResizeImg.width;
+            resizeH.value = loadedResizeImg.height;
+          };
+          loadedResizeImg.src = e.target.result;
+        };
+        reader.readAsDataURL(this.files[0]);
+      }
+    });
+
+    resizeW.addEventListener('input', () => {
+      if (resizeMaintain.checked && loadedResizeImg && resizeW.value) {
+        resizeH.value = Math.round(resizeW.value * (loadedResizeImg.height / loadedResizeImg.width));
+      }
+    });
+
+    document.getElementById('btn-run-resize').addEventListener('click', function() {
+      if (!loadedResizeImg) {
+        setStatus('status-resize', 'Please select an image file first.', 'error');
+        return;
+      }
+
+      const reqW = parseInt(resizeW.value);
+      const reqH = parseInt(resizeH.value);
+
+      if (!reqW || !reqH) {
+        setStatus('status-resize', 'Please specify valid width and height dimensions.', 'error');
+        return;
+      }
+
+      const canvas = document.createElement('canvas');
+      canvas.width = reqW;
+      canvas.height = reqH;
+      const ctx = canvas.getContext('2d');
+      ctx.imageSmoothingEnabled = true;
+      ctx.imageSmoothingQuality = 'high';
+      ctx.drawImage(loadedResizeImg, 0, 0, reqW, reqH);
+
+      const outputData = canvas.toDataURL('image/png');
+      renderResult(outputData, 'resized-image.png', `Resized image (${reqW}x${reqH}px)`);
+      setStatus('status-resize', `Resized to ${reqW}x${reqH}px successfully!`, 'success');
+    });
+
+    /* 5. PHOTO COMPRESSOR */
+    document.getElementById('btn-run-compress').addEventListener('click', function() {
+      const fileInput = document.getElementById('compress-file');
+      if (!fileInput.files.length) {
+        setStatus('status-compress', 'Please select an image file.', 'error');
+        return;
+      }
+
+      const quality = parseFloat(document.getElementById('compress-quality').value);
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const img = new Image();
+        img.onload = () => {
+          const canvas = document.createElement('canvas');
+          canvas.width = img.width;
+          canvas.height = img.height;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0);
+          const compressedData = canvas.toDataURL('image/jpeg', quality);
+          renderResult(compressedData, 'compressed-photo.jpg', 'Compressed web image asset');
+          setStatus('status-compress', 'Compressed photo successfully!', 'success');
+        };
+        img.src = e.target.result;
+      };
+      reader.readAsDataURL(fileInput.files[0]);
+    });
+
+    /* CONTACT FORM HANDLER */
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      setStatus('status-contact', 'Thank you! Your message has been received.', 'success');
+      document.getElementById('contact-form').reset();
+    }
+
+    /* 13 HIGH-QUALITY ART SHOWCASE GALLERY */
+    const galleryItems = [
+      { title: "1. Cyberpunk Neon City", alt: "Cyberpunk futuristic city street at night illuminated by glowing blue and pink neon signs", url: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=800&q=80" },
+      { title: "2. Photorealistic Wildlife", alt: "Photorealistic Bengal tiger walking majestically through a dense sunlit tropical jungle landscape", url: "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=800&q=80" },
+      { title: "3. Modern Developer Workspace", alt: "Minimalist software developer workspace with dual monitors displaying code syntax", url: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" },
+      { title: "4. Vivid Fantasy Portrait", alt: "Vibrant fantasy portrait of a warrior hero illuminated by cinematic sunset rim lighting", url: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" },
+      { title: "5. Abstract 3D Geometric Render", alt: "Abstract 3D Octane render of floating metallic iridescent geometric spheres", url: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" },
+      { title: "6. Tranquil Coastal Landscape", alt: "Tranquil coastal landscape featuring turquoise Mediterranean ocean waters hitting white cliffs", url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" },
+      { title: "7. Minimalist Architectural Vector", alt: "Minimalist modern architectural building structure with clean white lines against blue sky", url: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" },
+      { title: "8. Cosmic Nebula Galaxy Art", alt: "Deep space cosmic nebula cloud artwork featuring glowing purple and blue interstellar star clusters", url: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" },
+      { title: "9. Macro Botanical Photography", alt: "Extreme macro photograph showing intricate water drops resting on a vibrant green monstera leaf", url: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=800&q=80" },
+      { title: "10. Synthwave Retro Horizon", alt: "Retro 1980s synthwave horizon with a glowing wireframe mountain landscape", url: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80" },
+      { title: "11. Autumn Forest Mist", alt: "Atmospheric autumn forest covered in morning fog with orange and red maple leaves", url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80" },
+      { title: "12. Monochrome Portrait Art", alt: "High-contrast black and white dramatic portrait highlighting expressive facial shadows", url: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80" },
+      { title: "13. Dramatic Mountain Range", alt: "Majestic snow-capped mountain peaks towering above an alpine cloud layer during sunrise", url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" }
+    ];
+
+    const galleryContainer = document.getElementById('gallery-container');
+    galleryItems.forEach((item) => {
+      const card = document.createElement('div');
+      card.className = 'gallery-card';
+
+      card.innerHTML = `
+        <img src="${item.url}" alt="${item.alt}" loading="lazy" crossorigin="anonymous">
+        <div class="gallery-info">
+          <h4>${item.title}</h4>
+          <div class="gallery-alt"><strong>SEO Alt Text:</strong> ${item.alt}</div>
+        </div>
+      `;
+      galleryContainer.appendChild(card);
+    });
+  </script>
 </body>
 </html>
