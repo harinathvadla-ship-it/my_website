@@ -3,15 +3,134 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PhotoSuite AI - AI Image Generation & Creative Suite</title>
-  
-  <meta name="description" content="Free safe online AI image generator and creative suite. Generate stunning images from text prompts instantly in your browser.">
-  <meta name="keywords" content="ai image generator, text to image ai, creative suite, ai art generator">
-  <meta name="robots" content="index, follow">
 
+  <!-- PRIMARY SEO -->
+  <title>Free AI Image Generator – Text to Image & AI Art Online | ImageGeneration.co.in</title>
+
+  <meta name="description" content="Free AI image generator online for creating AI art from text prompts. Generate images, illustrations, creative designs and visual concepts with an easy text-to-image AI tool.">
+
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <meta name="author" content="ImageGeneration.co.in">
+  <meta name="theme-color" content="#0f172a">
+
+  <link rel="canonical" href="https://imagegeneration.co.in/">
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free AI Image Generator – Text to Image & AI Art Online">
+  <meta property="og:description" content="Create AI images and AI art from text prompts with a free online AI image generator.">
+  <meta property="og:url" content="https://imagegeneration.co.in/">
+  <meta property="og:site_name" content="ImageGeneration.co.in">
+
+  <!-- TWITTER -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free AI Image Generator – Text to Image & AI Art Online">
+  <meta name="twitter:description" content="Create AI images and AI art from text prompts using a free online AI image generator.">
+
+  <!-- PERFORMANCE -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- STRUCTURED DATA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://imagegeneration.co.in/#website",
+        "url": "https://imagegeneration.co.in/",
+        "name": "ImageGeneration.co.in",
+        "description": "Free online AI image generator for creating AI images and AI art from text prompts.",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://imagegeneration.co.in/#organization",
+        "name": "ImageGeneration.co.in",
+        "url": "https://imagegeneration.co.in/"
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://imagegeneration.co.in/#application",
+        "name": "ImageGeneration.co.in AI Image Generator",
+        "url": "https://imagegeneration.co.in/",
+        "description": "Online AI image generator for creating images and AI art from text prompts.",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Web Browser",
+        "browserRequirements": "Requires JavaScript",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "Article",
+        "@id": "https://imagegeneration.co.in/#image-to-image-guide",
+        "headline": "Image-to-Image AI Synthesis and Conditional Neural Transfer",
+        "description": "An educational guide explaining image-to-image AI synthesis, diffusion and structural conditioning.",
+        "author": {
+          "@type": "Organization",
+          "name": "ImageGeneration.co.in"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "ImageGeneration.co.in"
+        },
+        "mainEntityOfPage": "https://imagegeneration.co.in/"
+      },
+      {
+        "@type": "Article",
+        "@id": "https://imagegeneration.co.in/#image-processing-guide",
+        "headline": "Technical Architecture of Client-Side Canvas Operations",
+        "description": "A technical guide to browser-based image cropping, resizing and canvas operations.",
+        "author": {
+          "@type": "Organization",
+          "name": "ImageGeneration.co.in"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "ImageGeneration.co.in"
+        },
+        "mainEntityOfPage": "https://imagegeneration.co.in/"
+      },
+      {
+        "@type": "Article",
+        "@id": "https://imagegeneration.co.in/#image-compression-guide",
+        "headline": "Algorithmic Image Compression and Lossy vs Lossless Optimization",
+        "description": "An educational guide to image compression, JPEG, WebP, lossless and lossy optimization.",
+        "author": {
+          "@type": "Organization",
+          "name": "ImageGeneration.co.in"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "ImageGeneration.co.in"
+        },
+        "mainEntityOfPage": "https://imagegeneration.co.in/"
+      },
+      {
+        "@type": "Article",
+        "@id": "https://imagegeneration.co.in/#image-seo-guide",
+        "headline": "Web Asset SEO: Metadata, Alt Text and Image Search",
+        "description": "A practical guide to image SEO, descriptive alt text, metadata and search indexing.",
+        "author": {
+          "@type": "Organization",
+          "name": "ImageGeneration.co.in"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "ImageGeneration.co.in"
+        },
+        "mainEntityOfPage": "https://imagegeneration.co.in/"
+      }
+    ]
+  }
+  </script>
 
   <style>
     :root {
@@ -30,7 +149,11 @@
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
       background: var(--bg);
@@ -38,457 +161,1469 @@
       line-height: 1.7;
       min-height: 100vh;
     }
-    img { max-width: 100%; height: auto; display: block; }
-    a { color: var(--primary); text-decoration: none; }
-    a:hover { text-decoration: underline; }
 
-    .container { width: min(1120px, calc(100% - 32px)); margin: auto; }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 32px));
+      margin: auto;
+    }
 
     /* NAVIGATION */
+
     nav {
-      position: sticky; top: 0; z-index: 100;
+      position: sticky;
+      top: 0;
+      z-index: 100;
       background: rgba(15, 23, 42, 0.95);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
+
     .nav-inner {
-      min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 20px;
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
-    .logo { color: var(--primary); font-size: 1.25rem; font-weight: 800; letter-spacing: -0.5px; cursor: pointer; }
-    .nav-links { display: flex; list-style: none; gap: 16px; flex-wrap: wrap; }
-    .nav-links a { color: var(--muted); font-size: 0.88rem; font-weight: 500; cursor: pointer; }
-    .nav-links a:hover, .nav-links a.active { color: var(--primary); text-decoration: none; }
+
+    .logo {
+      color: var(--primary);
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      cursor: pointer;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--primary);
+      text-decoration: none;
+    }
 
     /* HERO */
-    .hero { text-align: center; padding: 40px 0 20px; }
-    .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; margin-bottom: 12px; letter-spacing: -1px; }
-    .hero h1 span { color: var(--primary); }
-    .hero p { max-width: 800px; margin: auto; color: var(--muted); font-size: 1rem; }
+
+    .hero {
+      text-align: center;
+      padding: 40px 0 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: -1px;
+    }
+
+    .hero h1 span {
+      color: var(--primary);
+    }
+
+    .hero p {
+      max-width: 800px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    /* SEO INTRODUCTION */
+
+    .seo-intro {
+      max-width: 900px;
+      margin: 0 auto 35px;
+      padding: 22px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .seo-intro p {
+      color: #cbd5e1;
+      font-size: 0.96rem;
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+
+    .seo-topic-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 18px;
+    }
+
+    .seo-topic-links a {
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      background: var(--bg-dark);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .seo-topic-links a:hover {
+      background: var(--card-light);
+      text-decoration: none;
+    }
 
     /* PAGE VIEWS */
-    .page-view { display: none; }
-    .page-view.active-page { display: block; }
+
+    .page-view {
+      display: none;
+    }
+
+    .page-view.active-page {
+      display: block;
+    }
 
     /* TOOL SECTION */
-    .tool-section { margin-bottom: 50px; }
+
+    .tool-section {
+      margin-bottom: 50px;
+    }
+
     .tool-card {
-      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
-      padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     }
 
-    .field { margin-bottom: 18px; }
-    label { display: block; color: var(--muted); font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
-    textarea, input[type="text"], input[type="email"], input[type="number"], select {
-      width: 100%; background: var(--bg-dark); border: 1px solid var(--border); color: var(--text);
-      border-radius: 8px; padding: 12px; outline: none; font-size: 0.92rem;
+    .field {
+      margin-bottom: 18px;
     }
-    textarea { min-height: 90px; resize: vertical; }
-    textarea:focus, input:focus, select:focus { border-color: var(--primary); }
 
-    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 18px; }
+    label {
+      display: block;
+      color: var(--muted);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    textarea,
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select {
+      width: 100%;
+      background: var(--bg-dark);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 8px;
+      padding: 12px;
+      outline: none;
+      font-size: 0.92rem;
+    }
+
+    textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    textarea:focus,
+    input:focus,
+    select:focus {
+      border-color: var(--primary);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin-bottom: 18px;
+    }
 
     .primary-btn {
-      width: 100%; background: var(--primary); color: #082f49; border: none;
-      font-weight: 800; font-size: 0.98rem; padding: 14px 20px; border-radius: 8px; cursor: pointer;
+      width: 100%;
+      background: var(--primary);
+      color: #082f49;
+      border: none;
+      font-weight: 800;
+      font-size: 0.98rem;
+      padding: 14px 20px;
+      border-radius: 8px;
+      cursor: pointer;
       transition: background 0.2s ease;
     }
-    .primary-btn:hover { background: var(--primary-dark); color: #fff; }
+
+    .primary-btn:hover {
+      background: var(--primary-dark);
+      color: #fff;
+    }
 
     .status-msg {
-      margin-top: 12px; padding: 10px; border-radius: 8px; background: var(--bg-dark);
-      color: var(--muted); font-size: 0.88rem; text-align: center; display: none;
+      margin-top: 12px;
+      padding: 10px;
+      border-radius: 8px;
+      background: var(--bg-dark);
+      color: var(--muted);
+      font-size: 0.88rem;
+      text-align: center;
+      display: none;
     }
-    .status-msg.show { display: block; }
-    .status-msg.error { color: var(--danger); border: 1px solid var(--danger); }
-    .status-msg.success { color: var(--success); border: 1px solid var(--success); }
+
+    .status-msg.show {
+      display: block;
+    }
+
+    .status-msg.error {
+      color: var(--danger);
+      border: 1px solid var(--danger);
+    }
+
+    .status-msg.success {
+      color: var(--success);
+      border: 1px solid var(--success);
+    }
 
     /* OUTPUT AREA */
-    .result-container {
-      margin-top: 20px; background: var(--bg-dark); border: 2px dashed var(--border);
-      border-radius: 10px; min-height: 280px; display: flex; flex-direction: column;
-      align-items: center; justify-content: center; position: relative; overflow: hidden; padding: 16px;
-    }
-    .result-placeholder { color: var(--muted); text-align: center; background: var(--bg-dark); padding: 20px; border-radius: 8px; }
-    .result-container img { max-height: 500px; object-fit: contain; border-radius: 6px; }
 
-    .result-actions { display: none; gap: 10px; margin-top: 14px; width: 100%; }
-    .result-actions a, .result-actions button {
-      flex: 1; text-align: center; padding: 10px; border-radius: 8px; font-weight: 700;
-      font-size: 0.9rem; cursor: pointer; border: none;
+    .result-container {
+      margin-top: 20px;
+      background: var(--bg-dark);
+      border: 2px dashed var(--border);
+      border-radius: 10px;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding: 16px;
     }
-    .btn-download { background: var(--primary); color: #082f49; text-decoration: none; }
-    .btn-clear { background: var(--card-light); color: var(--text); border: 1px solid var(--border) !important; }
+
+    .result-placeholder {
+      color: var(--muted);
+      text-align: center;
+      background: var(--bg-dark);
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .result-container img {
+      max-height: 500px;
+      object-fit: contain;
+      border-radius: 6px;
+    }
+
+    .result-actions {
+      display: none;
+      gap: 10px;
+      margin-top: 14px;
+      width: 100%;
+    }
+
+    .result-actions a,
+    .result-actions button {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-download {
+      background: var(--primary);
+      color: #082f49;
+      text-decoration: none;
+    }
+
+    .btn-clear {
+      background: var(--card-light);
+      color: var(--text);
+      border: 1px solid var(--border) !important;
+    }
 
     /* GALLERY */
-    .gallery-section { margin-bottom: 50px; }
-    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
-    .gallery-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
-    .gallery-card img { width: 100%; height: 220px; object-fit: cover; background: var(--bg-dark); }
-    .gallery-info { padding: 14px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
-    .gallery-info h4 { font-size: 0.95rem; color: var(--text); margin-bottom: 8px; }
-    .gallery-alt { background: var(--bg-dark); border: 1px solid var(--border); border-radius: 6px; padding: 8px; font-size: 0.78rem; color: var(--muted); word-break: break-word; }
+
+    .gallery-section {
+      margin-bottom: 50px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .gallery-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      background: var(--bg-dark);
+    }
+
+    .gallery-info {
+      padding: 14px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .gallery-info h4 {
+      font-size: 0.95rem;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .gallery-alt {
+      background: var(--bg-dark);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 8px;
+      font-size: 0.78rem;
+      color: var(--muted);
+      word-break: break-word;
+    }
 
     /* ARTICLES & CONTENT CARDS */
-    .full-article { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 36px; margin-bottom: 40px; }
-    .full-article h2 { font-size: 1.8rem; color: var(--primary); margin-bottom: 16px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
-    .full-article h3 { font-size: 1.3rem; color: #e2e8f0; margin: 24px 0 12px; }
-    .full-article p, .full-article li { color: #cbd5e1; font-size: 0.96rem; margin-bottom: 14px; line-height: 1.8; }
-    .full-article ul, .full-article ol { padding-left: 24px; margin-bottom: 16px; }
 
-    footer { background: var(--bg-dark); border-top: 1px solid var(--border); padding: 30px 0; text-align: center; color: var(--muted); font-size: 0.85rem; }
-    footer a { color: var(--muted); margin: 0 8px; }
-    footer a:hover { color: var(--primary); }
+    .full-article {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px;
+      margin-bottom: 40px;
+    }
+
+    .full-article h2 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 10px;
+    }
+
+    .full-article h3 {
+      font-size: 1.3rem;
+      color: #e2e8f0;
+      margin: 24px 0 12px;
+    }
+
+    .full-article p,
+    .full-article li {
+      color: #cbd5e1;
+      font-size: 0.96rem;
+      margin-bottom: 14px;
+      line-height: 1.8;
+    }
+
+    .full-article ul,
+    .full-article ol {
+      padding-left: 24px;
+      margin-bottom: 16px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--bg-dark);
+      border-top: 1px solid var(--border);
+      padding: 30px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--muted);
+      margin: 0 8px;
+    }
+
+    footer a:hover {
+      color: var(--primary);
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+      .nav-inner {
+        flex-direction: column;
+        padding: 14px 0;
+      }
+
+      .nav-links {
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .nav-links a {
+        font-size: 0.78rem;
+      }
+
+      .full-article {
+        padding: 22px;
+      }
+
+      .full-article h2 {
+        font-size: 1.45rem;
+      }
+
+      .seo-intro {
+        padding: 18px;
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <!-- NAVIGATION -->
   <nav>
     <div class="container nav-inner">
-      <div class="logo" onclick="switchPage('home-page')">PhotoSuite AI</div>
+
+      <div class="logo" onclick="switchPage('home-page')">
+        ImageGeneration.co.in
+      </div>
+
       <ul class="nav-links">
-        <li><a onclick="switchPage('home-page')" id="nav-home" class="active">AI Generator</a></li>
-        <li><a href="#gallery" onclick="switchPage('home-page')">13 Showcase</a></li>
-        <li><a href="#articles" onclick="switchPage('home-page')">SEO Guides</a></li>
-        <li><a onclick="switchPage('about-page')" id="nav-about">About Us</a></li>
-        <li><a onclick="switchPage('contact-page')" id="nav-contact">Contact Us</a></li>
-        <li><a onclick="switchPage('privacy-page')" id="nav-privacy">Privacy Policy</a></li>
-        <li><a onclick="switchPage('terms-page')" id="nav-terms">Terms & Conditions</a></li>
+
+        <li>
+          <a onclick="switchPage('home-page')" id="nav-home" class="active">
+            AI Image Generator
+          </a>
+        </li>
+
+        <li>
+          <a href="#gallery" onclick="switchPage('home-page')">
+            AI Image Examples
+          </a>
+        </li>
+
+        <li>
+          <a href="#articles" onclick="switchPage('home-page')">
+            AI Guides
+          </a>
+        </li>
+
+        <li>
+          <a onclick="switchPage('about-page')" id="nav-about">
+            About Us
+          </a>
+        </li>
+
+        <li>
+          <a onclick="switchPage('contact-page')" id="nav-contact">
+            Contact Us
+          </a>
+        </li>
+
+        <li>
+          <a onclick="switchPage('privacy-page')" id="nav-privacy">
+            Privacy Policy
+          </a>
+        </li>
+
+        <li>
+          <a onclick="switchPage('terms-page')" id="nav-terms">
+            Terms & Conditions
+          </a>
+        </li>
+
       </ul>
     </div>
   </nav>
 
   <main class="container">
-    
+
     <!-- HOME PAGE -->
+
     <div id="home-page" class="page-view active-page">
+
       <header class="hero">
-        <h1>AI <span>Text-to-Image Generation</span> Suite</h1>
-        <p>Generate high-quality artwork and images instantly from your detailed text prompts using advanced diffusion models.</p>
+
+        <h1>
+          Free <span>AI Image Generator</span> – Create AI Art from Text Online
+        </h1>
+
+        <p>
+          Create AI images from text prompts with our free online AI image generator.
+          Turn your ideas into AI art, illustrations, photos, creative designs and
+          visual concepts using an easy-to-use text-to-image generator.
+        </p>
+
       </header>
 
+
+      <!-- SEO INTRODUCTION -->
+
+      <section class="seo-intro" aria-label="AI image generator information">
+
+        <p>
+          <strong>ImageGeneration.co.in</strong> is an online AI image generator
+          designed for creating images from text prompts. Describe an idea, choose
+          an aspect ratio, and generate an AI image for creative projects,
+          illustrations, social media graphics, concepts and visual experiments.
+        </p>
+
+        <p>
+          Our AI image creation suite supports text-to-image generation and
+          showcases different visual styles including photorealistic, cinematic,
+          cyberpunk, fantasy, 3D and artistic concepts. The page also provides
+          educational guides about image generation, image processing,
+          compression, accessibility and image SEO.
+        </p>
+
+        <nav class="seo-topic-links" aria-label="AI image generator topics">
+
+          <a href="#tools">
+            AI Image Generator
+          </a>
+
+          <a href="#gallery">
+            AI Image Examples
+          </a>
+
+          <a href="#articles">
+            AI Image Generation Guides
+          </a>
+
+        </nav>
+
+      </section>
+
+
       <!-- EXCLUSIVE AI GENERATION TOOL SECTION -->
-      <section id="tools" class="tool-section">
+
+      <section id="tools" class="tool-section" aria-labelledby="generator-heading">
+
         <div class="tool-card">
+
+          <h2 id="generator-heading"
+              style="color:var(--primary); margin-bottom:18px;">
+            Free Text-to-Image AI Generator
+          </h2>
+
           <div class="field">
-            <label for="gen-prompt">Enter Detailed AI Image Prompt</label>
-            <textarea id="gen-prompt" placeholder="e.g., A futuristic cyberpunk street at night with neon lights and flying cars..."></textarea>
+
+            <label for="gen-prompt">
+              Enter Detailed AI Image Prompt
+            </label>
+
+            <textarea
+              id="gen-prompt"
+              placeholder="e.g., A futuristic cyberpunk street at night with neon lights and flying cars..."
+              aria-label="Enter a text prompt for AI image generation"></textarea>
+
           </div>
+
           <div class="grid-2">
+
             <div>
-              <label for="gen-aspect">Aspect Ratio</label>
+
+              <label for="gen-aspect">
+                Aspect Ratio
+              </label>
+
               <select id="gen-aspect">
-                <option value="1:1">Square (1:1)</option>
-                <option value="16:9">Landscape (16:9)</option>
-                <option value="9:16">Portrait (9:16)</option>
+
+                <option value="1:1">
+                  Square (1:1)
+                </option>
+
+                <option value="16:9">
+                  Landscape (16:9)
+                </option>
+
+                <option value="9:16">
+                  Portrait (9:16)
+                </option>
+
               </select>
+
             </div>
+
             <div>
-              <label for="gen-engine">AI Diffusion Engine</label>
+
+              <label for="gen-engine">
+                AI Diffusion Engine
+              </label>
+
               <select id="gen-engine">
-                <option value="flux">Flux.1 Schnell (Fast & Precise)</option>
-                <option value="stable-diffusion">Stable Diffusion XL</option>
+
+                <option value="flux">
+                  Flux.1 Schnell (Fast & Precise)
+                </option>
+
+                <option value="stable-diffusion">
+                  Stable Diffusion XL
+                </option>
+
               </select>
+
             </div>
+
           </div>
-          <button id="btn-generate" class="primary-btn">Generate Image from Prompt</button>
+
+          <button
+            id="btn-generate"
+            class="primary-btn"
+            type="button">
+            Generate Image from Prompt
+          </button>
+
           <div id="status-gen" class="status-msg"></div>
 
+
           <!-- OUTPUT DISPLAY CONTAINER -->
+
           <div class="result-container">
+
             <div id="result-placeholder" class="result-placeholder">
-              <p>Your generated AI image output will render here.</p>
+
+              <p>
+                Your generated AI image output will render here.
+              </p>
+
             </div>
-            <img id="result-img" alt="Generated AI Artwork Output" style="display:none;">
+
+            <img
+              id="result-img"
+              alt="Generated AI artwork from a text prompt"
+              style="display:none;">
+
           </div>
+
 
           <div id="result-actions" class="result-actions">
-            <a id="btn-download" class="btn-download" href="#" download="ai-generated-image.jpg">Download Generated Image</a>
-            <button id="btn-clear" class="btn-clear">Clear Output</button>
+
+            <a
+              id="btn-download"
+              class="btn-download"
+              href="#"
+              download="ai-generated-image.jpg">
+              Download Generated Image
+            </a>
+
+            <button
+              id="btn-clear"
+              class="btn-clear"
+              type="button">
+              Clear Output
+            </button>
+
           </div>
+
         </div>
+
       </section>
+
 
       <!-- 13 SHOWCASE GALLERY -->
-      <section id="gallery" class="gallery-section">
-        <h2 style="color:var(--primary); text-align:center; margin-bottom:8px;">13 Visual Showcase Gallery</h2>
-        <p style="color:var(--muted); text-align:center; margin-bottom:24px;">High-resolution curated showcase images complete with descriptive SEO alt text.</p>
+
+      <section id="gallery" class="gallery-section" aria-labelledby="gallery-heading">
+
+        <h2
+          id="gallery-heading"
+          style="color:var(--primary); text-align:center; margin-bottom:8px;">
+          AI Image Examples – 13 Visual Showcase Gallery
+        </h2>
+
+        <p
+          style="color:var(--muted); text-align:center; margin-bottom:24px;">
+          High-resolution curated showcase images complete with descriptive SEO alt text.
+        </p>
+
         <div id="gallery-container" class="gallery-grid"></div>
+
       </section>
 
-      <!-- 4 ARTICLES (UNTOUCHED) -->
-      <section id="articles">
+
+      <!-- 4 ARTICLES (PRESERVED VERBATIM) -->
+
+      <section id="articles" aria-label="AI image generation guides">
+
         <article class="full-article">
+
           <h2>1. Deep Dive into Image-to-Image AI Synthesis and Conditional Neural Transfer</h2>
+
           <p>Image-to-Image AI generation represents a cornerstone evolution in machine learning and computer vision. Unlike basic Text-to-Image models that start from unconditioned Gaussian noise, Image-to-Image synthesis utilizes a pre-existing source image as a structural anchor for the diffusion process.</p>
+
           <p>The neural framework processes the uploaded reference image through a convolutional encoder, converting spatial visual features into latent representation vectors. During conditioning, control network pipelines (such as ControlNet or IP-Adapter) extract structural boundary maps, edge detections, depth maps, or pose estimations from the original picture.</p>
+
           <h3>How Latent Diffusion Preserves Structural Geometry</h3>
+
           <p>During the generation phase, the user prompt guides the high-level semantic direction while the structural maps restrict the spatial deviation of synthesized pixels. This dual-stream conditioning enables dramatic style transitions—such as converting a mobile portrait into a cyberpunk digital painting or turning a hand-drawn sketch into an architectural 3D rendering—while maintaining exact spatial alignment with the source graphic.</p>
+
           <p>From an web performance standpoint, running client-side encoding prior to transmission reduces payload overhead. By preprocessing and compressing source images within the HTML5 Canvas environment before sending them to generative API endpoints, users benefit from rapid round-trip rendering times without server bottlenecks.</p>
+
         </article>
 
+
         <article class="full-article">
+
           <h2>2. Technical Architecture of Client-Side Canvas Operations: Precision Cropping & Resizing</h2>
+
           <p>Modern web development relies heavily on client-side pixel manipulation to deliver responsive, zero-latency user experiences. Relying on remote server environments for simple operations like cropping, aspect scaling, and dimensional adjustments introduces unnecessary network latency and bandwidth costs.</p>
+
           <p>HTML5 introduces the <code>HTMLCanvasElement</code> interface and its <code>CanvasRenderingContext2D</code> API, allowing developers to execute spatial matrix cropping and bicubic pixel interpolations directly in client RAM memory. The <code>ctx.drawImage()</code> method accepts nine precise positional arguments: <code>(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)</code>.</p>
+
           <h3>Preventing Cumulative Layout Shift (CLS)</h3>
+
           <p>When images are rendered without defined aspect ratios, browsers recalculate DOM geometry during network asset loading. By providing explicit pixel bounding boxes and pre-calculating scaling matrices on the client side, web platforms eliminate visual layout jumping (CLS), directly improving Core Web Vitals performance scores.</p>
+
           <p>Furthermore, scaling images prior to storage or display conserves mobile client battery life and cellular data limits. Transforming raw 12-megapixel smartphone camera captures down to web-optimized dimensions directly within local memory yields instantaneous rendering without third-party server exposure.</p>
+
         </article>
 
+
         <article class="full-article">
+
           <h2>3. Algorithmic Image Compression and Lossy vs Lossless Buffer Optimization</h2>
+
           <p>Image assets account for over 60% of total HTTP bandwidth traffic on average web pages. Optimizing digital photos before public deployment is critical for achieving optimal page speed performance and Google search index ranking advantages.</p>
 
           <h3>Lossless vs Lossy Optimization Mechanics</h3>
+
           <p>Lossless compression strategies eliminate redundant metadata (such as EXIF camera tags, geographic location markers, and color profile tables) while applying dictionary encoding algorithms like Huffman coding. This reduces total byte size without altering a single pixel value in the raster grid.</p>
 
           <p>Lossy compression, utilized in JPEG and WebP transformations, leverages human visual perception limitations through discrete cosine transforms (DCT). By prioritizing luminance details over subtle chrominance variances, lossy algorithms achieve dramatic byte-size reductions—often shrinking files by up to 80%—with virtually no perceived drop in visual fidelity.</p>
 
           <p>Executing client-side canvas compression via <code>canvas.toDataURL('image/jpeg', quality)</code> allows users to visually evaluate quality tradeoffs in real time, delivering lightweight web assets tuned for high performance.</p>
+
         </article>
 
+
         <article class="full-article">
+
           <h2>4. Web Asset SEO: Metadata Engineering, Accessible Alt Text, and Search Indexing</h2>
+
           <p>Search engine web crawlers evaluate digital image assets through surrounding context, file names, structural metadata, and descriptive alternative text (<code>alt</code> attributes). Providing well-structured metadata enhances screen reader accessibility while expanding site visibility across image search results.</p>
 
           <h3>Constructing High-Performing Alt Text Parameters</h3>
+
           <p>Effective alt text should accurately describe the primary subject, spatial composition, and style context without keyword stuffing. For instance, rather than using generic labels like <code>alt="photo"</code>, an optimized alt tag reads: <code>alt="Photorealistic Bengal tiger walking through a dense tropical rainforest at morning sunlight"</code>.</p>
 
           <p>Integrating dynamic alt-text generation within web suites guarantees that every AI-generated or edited graphic carries fully descriptive attributes upon export. This metadata integration helps search engine indexers index asset context, boosting organic search positioning across competitive queries.</p>
+
         </article>
+
       </section>
+
     </div>
+
 
     <!-- ABOUT US PAGE -->
+
     <div id="about-page" class="page-view">
+
       <header class="hero">
-        <h1>About <span>PhotoSuite AI</span></h1>
-        <p>Building high-performance, privacy-focused image editing tools for web creators worldwide.</p>
+
+        <h1>
+          About <span>ImageGeneration.co.in</span>
+        </h1>
+
+        <p>
+          Building high-performance, privacy-focused image editing tools
+          and AI image generation experiences for web creators worldwide.
+        </p>
+
       </header>
+
       <article class="full-article">
+
         <h2>Our Mission</h2>
-        <p>PhotoSuite AI was created to provide creators, developers, and designers with powerful AI image generation tools without requiring cumbersome registration or compromising user data.</p>
-        
+
+        <p>
+          PhotoSuite AI was created to provide creators, developers, and designers with powerful AI image generation tools without requiring cumbersome registration or compromising user data.
+        </p>
+
         <h3>Client-Side Privacy Architecture</h3>
-        <p>Privacy is built directly into our technical core. Every operation runs securely and efficiently with strict respect for user privacy.</p>
+
+        <p>
+          Privacy is built directly into our technical core. Every operation runs securely and efficiently with strict respect for user privacy.
+        </p>
 
         <h3>Core Technical Offerings</h3>
+
         <ul>
-          <li><strong>AI Text-to-Image Synthesis:</strong> Generate unique graphic assets from text descriptions using state-of-the-art models.</li>
-          <li><strong>Zero-Server Storage:</strong> All outputs are generated on-demand for immediate local download.</li>
+
+          <li>
+            <strong>AI Text-to-Image Synthesis:</strong>
+            Generate unique graphic assets from text descriptions using state-of-the-art models.
+          </li>
+
+          <li>
+            <strong>Zero-Server Storage:</strong>
+            All outputs are generated on-demand for immediate local download.
+          </li>
+
         </ul>
+
       </article>
+
     </div>
+
 
     <!-- CONTACT US PAGE -->
+
     <div id="contact-page" class="page-view">
+
       <header class="hero">
-        <h1>Contact <span>Our Support Team</span></h1>
-        <p>Have technical questions, bug reports, or feature requests? Contact our team directly.</p>
+
+        <h1>
+          Contact <span>Our Support Team</span>
+        </h1>
+
+        <p>
+          Have technical questions, bug reports, or feature requests?
+          Contact our team directly.
+        </p>
+
       </header>
-      <div class="tool-card" style="max-width: 700px; margin: 0 auto 50px;">
-        <form id="contact-form" onsubmit="handleContactSubmit(event)">
+
+      <div
+        class="tool-card"
+        style="max-width: 700px; margin: 0 auto 50px;">
+
+        <form
+          id="contact-form"
+          onsubmit="handleContactSubmit(event)">
+
           <div class="field">
-            <label for="contact-name">Your Full Name</label>
-            <input type="text" id="contact-name" placeholder="John Doe" required>
+
+            <label for="contact-name">
+              Your Full Name
+            </label>
+
+            <input
+              type="text"
+              id="contact-name"
+              placeholder="John Doe"
+              required>
+
           </div>
+
           <div class="field">
-            <label for="contact-email">Your Email Address</label>
-            <input type="email" id="contact-email" placeholder="john@example.com" required>
+
+            <label for="contact-email">
+              Your Email Address
+            </label>
+
+            <input
+              type="email"
+              id="contact-email"
+              placeholder="john@example.com"
+              required>
+
           </div>
+
           <div class="field">
-            <label for="contact-subject">Inquiry Type</label>
+
+            <label for="contact-subject">
+              Inquiry Type
+            </label>
+
             <select id="contact-subject">
-              <option value="support">Technical Support</option>
-              <option value="bug">Report a Bug / Issue</option>
-              <option value="feature">Feature Request</option>
-              <option value="business">Business / AdSense Inquiry</option>
+
+              <option value="support">
+                Technical Support
+              </option>
+
+              <option value="bug">
+                Report a Bug / Issue
+              </option>
+
+              <option value="feature">
+                Feature Request
+              </option>
+
+              <option value="business">
+                Business / AdSense Inquiry
+              </option>
+
             </select>
+
           </div>
+
           <div class="field">
-            <label for="contact-msg">Message Detail</label>
-            <textarea id="contact-msg" placeholder="Write your query or feedback here..." required></textarea>
+
+            <label for="contact-msg">
+              Message Detail
+            </label>
+
+            <textarea
+              id="contact-msg"
+              placeholder="Write your query or feedback here..."
+              required></textarea>
+
           </div>
-          <button type="submit" class="primary-btn">Send Message</button>
-          <div id="status-contact" class="status-msg"></div>
+
+          <button
+            type="submit"
+            class="primary-btn">
+            Send Message
+          </button>
+
+          <div
+            id="status-contact"
+            class="status-msg"></div>
+
         </form>
+
       </div>
+
     </div>
 
-    <!-- PRIVACY POLICY PAGE WITH ADULT CONTENT PROHIBITED CLAUSE -->
+
+    <!-- PRIVACY POLICY PAGE -->
+
     <div id="privacy-page" class="page-view">
+
       <header class="hero">
-        <h1>Privacy <span>Policy</span></h1>
-        <p>Transparent information regarding data collection, client-side processing, and content guidelines.</p>
+
+        <h1>
+          Privacy <span>Policy</span>
+        </h1>
+
+        <p>
+          Transparent information regarding data collection,
+          client-side processing, and content guidelines.
+        </p>
+
       </header>
+
       <article class="full-article">
+
         <h2>1. Overview</h2>
-        <p>PhotoSuite AI operates as a privacy-focused web application. We value user privacy and do not maintain user accounts, require registration, or store uploaded user files on remote web servers.</p>
+
+        <p>
+          PhotoSuite AI operates as a privacy-focused web application. We value user privacy and do not maintain user accounts, require registration, or store uploaded user files on remote web servers.
+        </p>
 
         <h2>2. Content Guidelines: Adult Content Strictly Prohibited</h2>
-        <p><strong>Strict Policy Warning:</strong> Adult content, sexually explicit material, NSFW imagery, violence, hate speech, or illegal content is <strong>strictly prohibited</strong> on this platform. Users are expressly forbidden from generating or processing explicit or adult-oriented material via our AI prompt generators. Failure to comply with these terms will result in immediate termination of platform access.</p>
+
+        <p>
+          <strong>Strict Policy Warning:</strong> Adult content, sexually explicit material, NSFW imagery, violence, hate speech, or illegal content is <strong>strictly prohibited</strong> on this platform. Users are expressly forbidden from generating or processing explicit or adult-oriented material via our AI prompt generators. Failure to comply with these terms will result in immediate termination of platform access.
+        </p>
 
         <h2>3. Local Client-Side Processing</h2>
-        <p>All tool operations execute securely on your device or via optimized cloud API endpoints. Images generated through prompts are processed on-demand and are discarded as soon as the session ends or output is cleared.</p>
+
+        <p>
+          All tool operations execute securely on your device or via optimized cloud API endpoints. Images generated through prompts are processed on-demand and are discarded as soon as the session ends or output is cleared.
+        </p>
 
         <h2>4. Third-Party Advertising & Cookies</h2>
-        <p>This web application may display third-party advertisements served by partners such as Google AdSense. Third-party vendors use cookies to serve ads based on prior user visits to this or other websites. Google's use of advertising cookies enables it and its partners to serve targeted ads based on your visit to our site and/or other sites on the Internet.</p>
-        <p>Users may opt out of personalized advertising by visiting Google's <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Ads Settings</a> or by opting out through <a href="https://www.aboutads.info" target="_blank" rel="noopener">aboutads.info</a>.</p>
+
+        <p>
+          This web application may display third-party advertisements served by partners such as Google AdSense. Third-party vendors use cookies to serve ads based on prior user visits to this or other websites. Google's use of advertising cookies enables it and its partners to serve targeted ads based on your visit to our site and/or other sites on the Internet.
+        </p>
+
+        <p>
+          Users may opt out of personalized advertising by visiting Google's
+          <a
+            href="https://www.google.com/settings/ads"
+            target="_blank"
+            rel="noopener">
+            Ads Settings
+          </a>
+          or by opting out through
+          <a
+            href="https://www.aboutads.info"
+            target="_blank"
+            rel="noopener">
+            aboutads.info
+          </a>.
+        </p>
 
         <h2>5. Log Files & Analytics</h2>
-        <p>Like standard web server hosting environments, standard log records may collect anonymous browser types, domain references, IP addresses, and timestamps to track aggregate performance trends and uphold platform security.</p>
+
+        <p>
+          Like standard web server hosting environments, standard log records may collect anonymous browser types, domain references, IP addresses, and timestamps to track aggregate performance trends and uphold platform security.
+        </p>
+
       </article>
+
     </div>
 
+
     <!-- TERMS & CONDITIONS PAGE -->
+
     <div id="terms-page" class="page-view">
+
       <header class="hero">
-        <h1>Terms <span>& Conditions</span></h1>
-        <p>Standard terms of service and legal agreement governing usage of PhotoSuite AI.</p>
+
+        <h1>
+          Terms <span>& Conditions</span>
+        </h1>
+
+        <p>
+          Standard terms of service and legal agreement governing usage
+          of PhotoSuite AI.
+        </p>
+
       </header>
+
       <article class="full-article">
+
         <h2>1. Acceptance of Terms</h2>
-        <p>By accessing and using PhotoSuite AI, you agree to comply with and be bound by these Terms and Conditions. If you do not agree to these terms, please discontinue use of the site immediately.</p>
+
+        <p>
+          By accessing and using PhotoSuite AI, you agree to comply with and be bound by these Terms and Conditions. If you do not agree to these terms, please discontinue use of the site immediately.
+        </p>
 
         <h2>2. Permitted Use</h2>
-        <p>PhotoSuite AI grants users a non-exclusive, non-transferable license to access AI generation tools for personal, professional, or commercial purposes. You agree not to use the suite to generate or distribute content that violates applicable laws or intellectual property rights.</p>
+
+        <p>
+          PhotoSuite AI grants users a non-exclusive, non-transferable license to access AI generation tools for personal, professional, or commercial purposes. You agree not to use the suite to generate or distribute content that violates applicable laws or intellectual property rights.
+        </p>
 
         <h2>3. Intellectual Property</h2>
-        <p>You retain full rights and ownership over any AI-generated image assets created using our tools. PhotoSuite AI claims no ownership over user-prompted content.</p>
+
+        <p>
+          You retain full rights and ownership over any AI-generated image assets created using our tools. PhotoSuite AI claims no ownership over user-prompted content.
+        </p>
 
         <h2>4. Disclaimer of Warranties</h2>
-        <p>The service is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind, whether express or implied. PhotoSuite AI does not guarantee uninterrupted service, zero errors, or complete accuracy of generated output.</p>
+
+        <p>
+          The service is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind, whether express or implied. PhotoSuite AI does not guarantee uninterrupted service, zero errors, or complete accuracy of generated output.
+        </p>
+
       </article>
+
     </div>
 
   </main>
 
+
+  <!-- FOOTER -->
+
   <footer>
+
     <div class="container">
-      <p>© 2026 PhotoSuite AI. All Rights Reserved.</p>
-      <p style="margin-top:10px;">
-        <a onclick="switchPage('home-page')">Home</a> |
-        <a onclick="switchPage('about-page')">About Us</a> |
-        <a onclick="switchPage('contact-page')">Contact Us</a> |
-        <a onclick="switchPage('privacy-page')">Privacy Policy</a> |
-        <a onclick="switchPage('terms-page')">Terms & Conditions</a>
+
+      <p>
+        © 2026 ImageGeneration.co.in. All Rights Reserved.
       </p>
+
+      <p style="margin-top:10px;">
+
+        <a onclick="switchPage('home-page')">
+          Home
+        </a>
+        |
+
+        <a onclick="switchPage('about-page')">
+          About Us
+        </a>
+        |
+
+        <a onclick="switchPage('contact-page')">
+          Contact Us
+        </a>
+        |
+
+        <a onclick="switchPage('privacy-page')">
+          Privacy Policy
+        </a>
+        |
+
+        <a onclick="switchPage('terms-page')">
+          Terms & Conditions
+        </a>
+
+      </p>
+
     </div>
+
   </footer>
 
+
   <script>
+
     /* PAGE ROUTER SWITCHING */
+
     function switchPage(pageId) {
-      document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active-page'));
-      document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-      
-      document.getElementById(pageId).classList.add('active-page');
-      const navEl = document.getElementById('nav-' + pageId.replace('-page', ''));
-      if (navEl) navEl.classList.add('active');
 
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+      document
+        .querySelectorAll('.page-view')
+        .forEach(p => p.classList.remove('active-page'));
 
-    /* DISPLAY UTILITIES */
-    const resultImg = document.getElementById('result-img');
-    const resultPlaceholder = document.getElementById('result-placeholder');
-    const resultActions = document.getElementById('result-actions');
-    const btnDownload = document.getElementById('btn-download');
+      document
+        .querySelectorAll('.nav-links a')
+        .forEach(a => a.classList.remove('active'));
 
-    function setStatus(id, text, type = "") {
-      const el = document.getElementById(id);
-      el.textContent = text;
-      el.className = "status-msg show " + type;
-    }
+      document
+        .getElementById(pageId)
+        .classList.add('active-page');
 
-    function renderResult(dataUrl, fileName, altText) {
-      resultImg.src = dataUrl;
-      resultImg.alt = altText;
-      resultImg.style.display = "block";
-      resultPlaceholder.style.display = "none";
-      resultActions.style.display = "flex";
-      btnDownload.href = dataUrl;
-      btnDownload.download = fileName;
-      resultImg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
+      const navEl =
+        document.getElementById(
+          'nav-' + pageId.replace('-page', '')
+        );
 
-    document.getElementById('btn-clear').addEventListener('click', () => {
-      resultImg.src = "";
-      resultImg.style.display = "none";
-      resultPlaceholder.style.display = "block";
-      resultActions.style.display = "none";
-    });
-
-    /* AI TEXT-TO-IMAGE GENERATION TOOL IMPLEMENTATION */
-    document.getElementById('btn-generate').addEventListener('click', async function() {
-      const promptText = document.getElementById('gen-prompt').value.trim();
-      if (!promptText) {
-        setStatus('status-gen', 'Please enter a valid text prompt for image generation.', 'error');
-        return;
+      if (navEl) {
+        navEl.classList.add('active');
       }
 
-      setStatus('status-gen', 'Generating AI image from your prompt (using Flux Engine)...', '');
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
 
-      // Using Pollinations AI / Flux public endpoint for robust client-side rendering without key requirements
-      const aspect = document.getElementById('gen-aspect').value;
-      let width = 1024, height = 1024;
-      if (aspect === '16:9') { width = 1280; height = 720; }
-      else if (aspect === '9:16') { width = 720; height = 1280; }
-
-      const encodedPrompt = encodeURIComponent(promptText);
-      const imageUrl = `https://image.pollinations.ai/prompt/${encodedPrompt}?width=${width}&height=${height}&nologo=true&model=flux`;
-
-      const imgLoader = new Image();
-      imgLoader.crossOrigin = "anonymous";
-      imgLoader.onload = function() {
-        renderResult(imageUrl, 'ai-generated-image.jpg', promptText);
-        setStatus('status-gen', 'AI image generated successfully according to your prompt!', 'success');
-      };
-      imgLoader.onerror = function() {
-        setStatus('status-gen', 'Failed to generate image. Please try again with a different prompt.', 'error');
-      };
-      imgLoader.src = imageUrl;
-    });
-
-    /* CONTACT FORM HANDLER */
-    function handleContactSubmit(e) {
-      e.preventDefault();
-      setStatus('status-contact', 'Thank you! Your message has been received.', 'success');
-      document.getElementById('contact-form').reset();
     }
 
-    /* 13 HIGH-QUALITY SHOWCASE GALLERY WITH ALT TEXT (UNTOUCHED) */
+
+    /* DISPLAY UTILITIES */
+
+    const resultImg =
+      document.getElementById('result-img');
+
+    const resultPlaceholder =
+      document.getElementById('result-placeholder');
+
+    const resultActions =
+      document.getElementById('result-actions');
+
+    const btnDownload =
+      document.getElementById('btn-download');
+
+
+    function setStatus(id, text, type = "") {
+
+      const el =
+        document.getElementById(id);
+
+      el.textContent = text;
+
+      el.className =
+        "status-msg show " + type;
+
+    }
+
+
+    function renderResult(dataUrl, fileName, altText) {
+
+      resultImg.src = dataUrl;
+
+      resultImg.alt = altText;
+
+      resultImg.style.display = "block";
+
+      resultPlaceholder.style.display = "none";
+
+      resultActions.style.display = "flex";
+
+      btnDownload.href = dataUrl;
+
+      btnDownload.download = fileName;
+
+      resultImg.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+
+    }
+
+
+    document
+      .getElementById('btn-clear')
+      .addEventListener('click', () => {
+
+        resultImg.src = "";
+
+        resultImg.style.display = "none";
+
+        resultPlaceholder.style.display = "block";
+
+        resultActions.style.display = "none";
+
+      });
+
+
+    /* AI TEXT-TO-IMAGE GENERATION TOOL IMPLEMENTATION */
+
+    document
+      .getElementById('btn-generate')
+      .addEventListener('click', async function() {
+
+        const promptText =
+          document
+            .getElementById('gen-prompt')
+            .value
+            .trim();
+
+        if (!promptText) {
+
+          setStatus(
+            'status-gen',
+            'Please enter a valid text prompt for image generation.',
+            'error'
+          );
+
+          return;
+        }
+
+
+        setStatus(
+          'status-gen',
+          'Generating AI image from your prompt (using Flux Engine)...',
+          ''
+        );
+
+
+        const aspect =
+          document.getElementById('gen-aspect').value;
+
+        let width = 1024;
+        let height = 1024;
+
+
+        if (aspect === '16:9') {
+
+          width = 1280;
+          height = 720;
+
+        }
+
+        else if (aspect === '9:16') {
+
+          width = 720;
+          height = 1280;
+
+        }
+
+
+        const encodedPrompt =
+          encodeURIComponent(promptText);
+
+
+        const imageUrl =
+          `https://image.pollinations.ai/prompt/${encodedPrompt}?width=${width}&height=${height}&nologo=true&model=flux`;
+
+
+        const imgLoader =
+          new Image();
+
+        imgLoader.crossOrigin = "anonymous";
+
+
+        imgLoader.onload = function() {
+
+          renderResult(
+            imageUrl,
+            'ai-generated-image.jpg',
+            promptText
+          );
+
+          setStatus(
+            'status-gen',
+            'AI image generated successfully according to your prompt!',
+            'success'
+          );
+
+        };
+
+
+        imgLoader.onerror = function() {
+
+          setStatus(
+            'status-gen',
+            'Failed to generate image. Please try again with a different prompt.',
+            'error'
+          );
+
+        };
+
+
+        imgLoader.src = imageUrl;
+
+      });
+
+
+    /* CONTACT FORM HANDLER */
+
+    function handleContactSubmit(e) {
+
+      e.preventDefault();
+
+      setStatus(
+        'status-contact',
+        'Thank you! Your message has been received.',
+        'success'
+      );
+
+      document
+        .getElementById('contact-form')
+        .reset();
+
+    }
+
+
+    /* 13 HIGH-QUALITY SHOWCASE GALLERY WITH ALT TEXT (PRESERVED) */
+
     const galleryItems = [
-      { title: "1. Cyberpunk Neon City", alt: "Cyberpunk futuristic city street at night illuminated by glowing blue and pink neon signs", url: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=800&q=80" },
-      { title: "2. Photorealistic Wildlife", alt: "Photorealistic Bengal tiger walking majestically through a dense sunlit tropical jungle landscape", url: "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=800&q=80" },
-      { title: "3. Modern Developer Workspace", alt: "Minimalist software developer workspace with dual monitors displaying code syntax", url: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" },
-      { title: "4. Vivid Fantasy Portrait", alt: "Vibrant fantasy portrait of a warrior hero illuminated by cinematic sunset rim lighting", url: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" },
-      { title: "5. Abstract 3D Geometric Render", alt: "Abstract 3D Octane render of floating metallic iridescent geometric spheres", url: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" },
-      { title: "6. Tranquil Coastal Landscape", alt: "Tranquil coastal landscape featuring turquoise Mediterranean ocean waters hitting white cliffs", url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" },
-      { title: "7. Minimalist Architectural Vector", alt: "Minimalist modern architectural building structure with clean white lines against blue sky", url: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" },
-      { title: "8. Cosmic Nebula Galaxy Art", alt: "Deep space cosmic nebula cloud artwork featuring glowing purple and blue interstellar star clusters", url: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" },
-      { title: "9. Macro Botanical Photography", alt: "Extreme macro photograph showing intricate water drops resting on a vibrant green monstera leaf", url: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=800&q=80" },
-      { title: "10. Synthwave Retro Horizon", alt: "Retro 1980s synthwave horizon with a glowing wireframe mountain landscape", url: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80" },
-      { title: "11. Autumn Forest Mist", alt: "Atmospheric autumn forest covered in morning fog with orange and red maple leaves", url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80" },
-      { title: "12. Monochrome Portrait Art", alt: "High-contrast black and white dramatic portrait highlighting expressive facial shadows", url: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80" },
-      { title: "13. Dramatic Mountain Range", alt: "Majestic snow-capped mountain peaks towering above an alpine cloud layer during sunrise", url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" }
+
+      {
+        title: "1. Cyberpunk Neon City",
+        alt: "Cyberpunk futuristic city street at night illuminated by glowing blue and pink neon signs",
+        url: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=800&q=80"
+      },
+
+      {
+        title: "2. Photorealistic Wildlife",
+        alt: "Photorealistic Bengal tiger walking majestically through a dense sunlit tropical jungle landscape",
+        url: "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=800&q=80"
+      },
+
+      {
+        title: "3. Modern Developer Workspace",
+        alt: "Minimalist software developer workspace with dual monitors displaying code syntax",
+        url: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+      },
+
+      {
+        title: "4. Vivid Fantasy Portrait",
+        alt: "Vibrant fantasy portrait of a warrior hero illuminated by cinematic sunset rim lighting",
+        url: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80"
+      },
+
+      {
+        title: "5. Abstract 3D Geometric Render",
+        alt: "Abstract 3D Octane render of floating metallic iridescent geometric spheres",
+        url: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80"
+      },
+
+      {
+        title: "6. Tranquil Coastal Landscape",
+        alt: "Tranquil coastal landscape featuring turquoise Mediterranean ocean waters hitting white cliffs",
+        url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+      },
+
+      {
+        title: "7. Minimalist Architectural Vector",
+        alt: "Minimalist modern architectural building structure with clean white lines against blue sky",
+        url: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80"
+      },
+
+      {
+        title: "8. Cosmic Nebula Galaxy Art",
+        alt: "Deep space cosmic nebula cloud artwork featuring glowing purple and blue interstellar star clusters",
+        url: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80"
+      },
+
+      {
+        title: "9. Macro Botanical Photography",
+        alt: "Extreme macro photograph showing intricate water drops resting on a vibrant green monstera leaf",
+        url: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=800&q=80"
+      },
+
+      {
+        title: "10. Synthwave Retro Horizon",
+        alt: "Retro 1980s synthwave horizon with a glowing wireframe mountain landscape",
+        url: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80"
+      },
+
+      {
+        title: "11. Autumn Forest Mist",
+        alt: "Atmospheric autumn forest covered in morning fog with orange and red maple leaves",
+        url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80"
+      },
+
+      {
+        title: "12. Monochrome Portrait Art",
+        alt: "High-contrast black and white dramatic portrait highlighting expressive facial shadows",
+        url: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80"
+      },
+
+      {
+        title: "13. Dramatic Mountain Range",
+        alt: "Majestic snow-capped mountain peaks towering above an alpine cloud layer during sunrise",
+        url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80"
+      }
+
     ];
 
-    const galleryContainer = document.getElementById('gallery-container');
+
+    const galleryContainer =
+      document.getElementById('gallery-container');
+
+
     galleryItems.forEach((item) => {
-      const card = document.createElement('div');
-      card.className = 'gallery-card';
+
+      const card =
+        document.createElement('div');
+
+      card.className =
+        'gallery-card';
+
 
       card.innerHTML = `
-        <img src="${item.url}" alt="${item.alt}" loading="lazy" crossorigin="anonymous">
+
+        <img
+          src="${item.url}"
+          alt="${item.alt}"
+          loading="lazy"
+          crossorigin="anonymous">
+
         <div class="gallery-info">
-          <h4>${item.title}</h4>
-          <div class="gallery-alt"><strong>SEO Alt Text:</strong> ${item.alt}</div>
+
+          <h3
+            style="font-size:0.95rem; color:var(--text); margin-bottom:8px;">
+            ${item.title}
+          </h3>
+
+          <div class="gallery-alt">
+            <strong>SEO Alt Text:</strong>
+            ${item.alt}
+          </div>
+
         </div>
       `;
+
+
       galleryContainer.appendChild(card);
+
     });
+
   </script>
+
 </body>
 </html>
